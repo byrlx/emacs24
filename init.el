@@ -177,9 +177,9 @@ smtpmail-debug-info t)
 
 ;;------------------------------------------------------------------------------
 ;;; Configuration for git in emacs
-;(add-to-list 'load-path "~/.emacs.d/git")
-;(require 'git-emacs)
-;(require 'dash)
+(add-to-list 'load-path "~/.emacs.d/git")
+(require 'git-emacs)
+(require 'dash)
 
 
 ;;------------------------------------------------------------------------------
