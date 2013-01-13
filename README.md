@@ -1,4 +1,4 @@
 emacs24
 =======
 
-Emacs 24 configuration
+This is my Emacs 24 configuration.
