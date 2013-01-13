@@ -181,7 +181,7 @@ smtpmail-debug-info t)
 (add-to-list 'load-path "~/.emacs.d/git")
 (require 'git-emacs)
 (require 'dash)
-
+(global-set-key (kbd "C-i") 'magit-status)
 
 ;;------------------------------------------------------------------------------
 ;;; Autopair in emacs
@@ -311,7 +311,10 @@ file of a buffer in an external program."
  '(ecb-tree-buffer-style (quote ascii-guides))
  '(fci-rule-color "#073642")
  '(inhibit-startup-screen t)
- '(openwith-associations (quote (("\\.pdf\\'" "evince" (file)) ("\\.\\(?:xls?x\\|doc\\|docx\\|rtf\\|ppt\\|pptx\\)\\'" "soffice" (file)) ("\\.\\(?:mpe?g\\|avi\\|wmv\\|mp4\\|mkv\\|mp3\\|wma\\|flac\\|mov\\|ape\\|m4a\\)\\'" "vlc" (file)) ("\\.\\(?:jp?g\\|png\\)\\'" "eog" (file)))))
+ '(openwith-associations (quote (("\\.pdf\\'" "evince" (file))
+					   ("\\.\\(?:xls?x\\|doc\\|docx\\|rtf\\|ppt\\|pptx\\)\\'" "soffice" (file))
+					   ("\\.\\(?:mpe?g\\|avi\\|wmv\\|mp4\\|mkv\\|mp3\\|wma\\|flac\\|mov\\|ape\\|m4a\\)\\'" "vlc" (file))
+					   ("\\.\\(?:jp?g\\|png\\)\\'" "eog" (file)))))
  '(openwith-confirm-invocation nil)
  '(sr-windows-default-ratio 66)
  '(tree-widget-image-enable t))
