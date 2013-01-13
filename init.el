@@ -181,7 +181,8 @@ smtpmail-debug-info t)
 (add-to-list 'load-path "~/.emacs.d/git")
 (require 'git-emacs)
 (require 'dash)
-(global-set-key (kbd "C-i") 'magit-status)
+(global-set-key (kbd "C-x v ]") 'magit-status)
+(global-set-key (kbd "C-x v [") 'magit-log)
 
 ;;------------------------------------------------------------------------------
 ;;; Autopair in emacs
