@@ -69,9 +69,10 @@ c-default-style "linux") ;;;automatic indentation
 ;;; should be default package. But now it can be downloaded
 ;;; from: http://user.it.uu.se/~mic/pager.el
 (require 'pager)
-(global-set-key (kbd "M-[") 'pager-row-up)
-(global-set-key (kbd "M-]") 'pager-row-down)
-
+(global-set-key (kbd "M-p") 'pager-row-up)
+(global-set-key (kbd "M-n") 'pager-row-down)
+(global-set-key (kbd "M-P") 'backward-paragraph)
+(global-set-key (kbd "M-N") 'forward-paragraph)
 
 
 ;;------------------------------------------------------------------------------
@@ -323,6 +324,15 @@ file of a buffer in an external program."
 (require 'openwith)
 (openwith-mode t)
 
+(custom-set-faces
+ ;; custom-set-faces was added by Custom.
+ ;; If you edit it by hand, you could mess it up, so be careful.
+ ;; Your init file should contain only one such instance.
+ ;; If there is more than one, they won't work right.
+ '(sr-active-path-face ((t (:background "dim gray" :foreground "white" :weight bold :height 130))))
+ '(sr-passive-path-face ((t (:background "dim gray" :foreground "dark gray" :weight bold :height 130)))))
+
+
 ;;-----------------------------------------------------------------------------
 ;;; web-mode.el --- Web-mode environment for web development on emacs
 (require 'web-mode) 
@@ -344,12 +354,4 @@ file of a buffer in an external program."
 (add-to-list 'web-mode-snippets '("span" "<span>" "</span>"))
 (add-to-list 'web-mode-snippets '("html" "<html>" "</html>"))
 (add-to-list 'web-mode-snippets '("p" "<p>" "</p>"))
-
-(custom-set-faces
- ;; custom-set-faces was added by Custom.
- ;; If you edit it by hand, you could mess it up, so be careful.
- ;; Your init file should contain only one such instance.
- ;; If there is more than one, they won't work right.
- '(sr-active-path-face ((t (:background "dim gray" :foreground "white" :weight bold :height 130))))
- '(sr-passive-path-face ((t (:background "dim gray" :foreground "dark gray" :weight bold :height 130)))))
 
