@@ -1,4 +1,3 @@
-;;;; Macros ;;;;
 ;; Are we running XEmacs or Emacs?
 (defvar running-xemacs (string-match "XEmacs\\|Lucid" emacs-version))
 
