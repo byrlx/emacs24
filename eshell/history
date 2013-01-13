@@ -1,0 +1,128 @@
+tar -zxvf emacs-w3m-1.4.4.tar.gz
+exit
+cd /home/vuongnguyen/Desktop/PracticeQuestions/
+gcc A-type1.c 
+./a.out
+./a.out +one +three +two
+./a.out tew one four
+clear
+./a.out tew one four
+./a.out +hai ba +open
+exit
+cd /home/vuongnguyen/Desktop/PracticeQuestions/
+./a.out +b +c +a
+gcc ./A-type1.c 
+./a.out +b +c +a
+./a.out +a +e
+./a.out +e +a
+gcc ./A-type1.c 
+gcc ./A-type1.c 
+./a.out +e +a
+Num oclearf argv[]: 3
+clear
+exit
+cd /home/vuongnguyen/Desktop/PracticeQuestions/
+./a.out +e +a +b +d
+gcc ./A-type1.c 
+exit
+cd /home/vuongnguyen/Desktop/PracticeQuestions/
+./a.out +e +a +b +d
+gcc ./A-type1.c 
+./a.out +e +a +b +d
+gcc ./A-type1.c 
+./a.out +e +a +b +d
+gcc ./A-type1.c 
+./a.out +e +a +b +d
+./a.out +e +a +b +d +y
+gcc ./A-type1.c 
+./a.out +e +a +b +d +y
+gcc ./A-type1.c 
+./a.out +e +a +b +d +y
+gcc ./A-type1.c 
+gcc ./A-type1.c 
+./a.out +e +a +b +d +y
+gcc ./A-type1.c 
+./a.out +e +a +b +d +y
+gcc ./A-type1.c 
+./a.out +e +a +b +d +y
+gcc ./A-type1.c 
+./a.out +e +a +b +d +y
+exit
+cd /home/vuongnguyen/Desktop/PracticeQuestions/
+./a.out +e +a +b +d +y
+exit
+cd /home/vuongnguyen/
+gcc A1.c 
+exit
+cd /home/vuongnguyen/
+gcc A1.c 
+exit
+cd /home/vuongnguyen/
+gcc A1.c 
+exit
+cd /home/vuongnguyen/
+gcc A1.c 
+./a.out +e +a +b +d +y
+exit
+cd /home/vuongnguyen
+ls
+cd Desktop/PracticeQuestions/
+gcc A-type7.c 
+./a.out
+cd /home/vuongnguyen/
+cd Desktop/PracticeQuestions/
+gcc A-type6.c 
+./a.out
+cd /home/vuongnguyen/Desktop/Music/The\ Best\ Song\ Book\ Of\ All\ Time\ 7CDs\ \(2005\)/Various\ Artists\ -\ The\ Best\ Song\ Book\ Of\ All\ Time\ Vol.7/
+clear
+cd
+exit
+cd /home/vuongnguyen/.emacs.d/
+git status
+git add .
+git status
+git --version
+git status
+git commit -am "message"
+git push github emacs24
+git push emacs24
+git remote v
+git remote add VuogNguyen https://github.com/VuogNguyen/Emacs.git
+git push
+git push VuogNguyen
+git push VuogNguyen
+git update-server-info
+git push VuogNguyen
+git remote add VuogNguyen git://github.com/VuogNguyen/emacs24.git
+exit
+cd /home/vuongnguyen/.emacs.d/
+git-init
+git status
+git add .
+git add
+git add *
+status
+git status
+git remote VuogNguyen git://github.com/VuogNguyen/emacs24.git
+git remote add VuogNguyen git://github.com/VuogNguyen/emacs24.git
+git push VuogNguyen master
+git remote add VuogNguyen git@github.com:VuogNguyen/emacs24.git
+exit
+cd /home/vuongnguyen/.emacs.d/
+git init
+ls
+ls -s
+clear
+git status
+git add .
+git status
+git remote VuogNguyen git@github.com:VuogNguyen/emacs24.git
+git remote add VuogNguyen git@github.com:VuogNguyen/emacs24.git
+git push VuogNguyen master
+exit
+cd /home/vuongnguyen/.emacs.d/
+git remote add vuongnguyen1909@gmail.com git@github.com:VuogNguyen/emacs24.git
+git push
+git push vuongnguyen1909@gmail.com
+git status
+exit
