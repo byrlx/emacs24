@@ -291,7 +291,7 @@ file of a buffer in an external program."
 
 
 
-;; From now on is for emacs 24
+;; This is configuration for Emacs 24
 ;; =========================================================================================================================================================================
 (custom-set-variables
  ;; custom-set-variables was added by Custom.
