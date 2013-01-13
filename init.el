@@ -11,7 +11,7 @@
   (list 'if running-xemacs (cons 'progn x)))
 (defmacro Xlaunch (&rest x)
   (list 'if (eq window-system 'x) (cons 'progn x)))
-;;;; Macros ;;;;
+
 ;;; Setup initial emacs frames (windows) location and size
 ;; (setq default-frame-alist
   ;;    '((wait-for-wm . nil)
