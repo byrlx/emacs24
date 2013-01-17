@@ -1,7 +1,3 @@
-tar -zxvf emacs-w3m-1.4.4.tar.gz
-exit
-cd /home/vuongnguyen/Desktop/PracticeQuestions/
-gcc A-type1.c 
 ./a.out
 ./a.out +one +three +two
 ./a.out tew one four
@@ -125,4 +121,8 @@ git remote add vuongnguyen1909@gmail.com git@github.com:VuogNguyen/emacs24.git
 git push
 git push vuongnguyen1909@gmail.com
 git status
+exit
+cd /home/vuongnguyen/Desktop/Music/Taylor\ Swift/
+cd
+sudo pear channel-discovery pear.phpunit.de
 exit

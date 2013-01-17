@@ -110,4 +110,3 @@ where the symbol 'file' is replaced by the file to be opened."
 (provide 'openwith)
 
 ;;; openwith.el ends here
-

@@ -301,7 +301,7 @@ file of a buffer in an external program."
  ;; If there is more than one, they won't work right.
  '(ansi-color-faces-vector [default bold shadow italic underline bold bold-italic bold])
  '(ansi-color-names-vector (vector "#839496" "#dc322f" "#859900" "#b58900" "#268bd2" "#d33682" "#2aa198" "#002b36"))
- '(custom-safe-themes (quote ("cd897b5508b62ac507ac961764b7a2c643824bf49875abdab97f7a5a3097234c" (default))))
+ '(custom-safe-themes (quote ("e76dcc3da1acdbd6510a9df7a8846c6b1b8bb9a004be89b73e987fd1e61120f2" (default))))
  '(custom-theme-directory "~/.emacs.d/themes")
  '(ecb-layout-name "left14")
  '(ecb-layout-window-sizes (quote (("left14" (ecb-directories-buffer-name 0.22857142857142856 . 0.717391304347826) (ecb-history-buffer-name 0.22857142857142856 . 0.2608695652173913)))))
@@ -312,15 +312,18 @@ file of a buffer in an external program."
  '(ecb-tree-buffer-style (quote ascii-guides))
  '(fci-rule-color "#073642")
  '(inhibit-startup-screen t)
- '(openwith-associations (quote (("\\.pdf\\'" "evince" (file))
+ '(openwith-associations (quote (("\\.pdf\\'" "evince" (file)) 
 					   ("\\.\\(?:xls?x\\|doc\\|docx\\|rtf\\|ppt\\|pptx\\)\\'" "soffice" (file))
-					   ("\\.\\(?:mpe?g\\|avi\\|wmv\\|mp4\\|mkv\\|mp3\\|wma\\|flac\\|mov\\|ape\\|m4a\\)\\'" "vlc" (file))
+					   ("\\.\\(?:mpe?g\\|avi\\|wmv\\|mp4\\|mkv\\|mp3\\|wma\\|flac\\|mov\\|ape\\|m4a\\)\\'" "vlc" (file)) 
 					   ("\\.\\(?:jp?g\\|png\\)\\'" "eog" (file)))))
  '(openwith-confirm-invocation nil)
  '(sr-windows-default-ratio 66)
  '(tree-widget-image-enable t))
+
+;; Theming selection for Emacs 24
 (load-theme 'darkclean)
-;;(load-theme 'sanityinc-solarized-dark)
+;(load-theme 'sanityinc-solarized-dark)
+;(load-theme 'sanityinc-solarized-light)
 
 
 ;;------------------------------------------------------------------------------
@@ -334,7 +337,9 @@ file of a buffer in an external program."
  ;; Your init file should contain only one such instance.
  ;; If there is more than one, they won't work right.
  '(sr-active-path-face ((t (:background "dim gray" :foreground "white" :weight bold :height 130))))
- '(sr-passive-path-face ((t (:background "dim gray" :foreground "dark gray" :weight bold :height 130)))))
+ '(sr-highlight-path-face ((t nil)))
+ '(sr-passive-path-face ((t (:background "dim gray" :foreground "dark gray" :weight bold :height 130))))
+ '(web-mode-html-tag-face ((t (:foreground "dark gray")))))
 
 
 ;;-----------------------------------------------------------------------------
@@ -348,12 +353,13 @@ file of a buffer in an external program."
 (add-to-list 'auto-mode-alist '("\\.as[cp]x\\'" . web-mode)) 
 (add-to-list 'auto-mode-alist '("\\.erb\\'" . web-mode))
 (add-to-list 'auto-mode-alist '("\\.html?\\'" . web-mode))
-(defun web-mode-hook () "Hooks for Web mode." (setq web-mode-markup-indent-offset 3)) 
+
+(defun web-mode-hook () "Hooks for Web mode." 
+  (setq web-mode-markup-indent-offset 4)
+  (setq web-mode-css-indent-offset 4)
+  (setq web-mode-code-indent-offset 4)) 
 (add-hook 'web-mode-hook 'web-mode-hook)
-(setq web-mode-markup-indent-offset 3)
-(setq web-mode-css-indent-offset 3)
-(setq web-mode-code-indent-offset 3)
-(set-face-attribute 'web-mode-css-rule-face nil :foreground "Pink3")
+
 (add-to-list 'web-mode-snippets '("div" "<div>" "</div>"))
 (add-to-list 'web-mode-snippets '("span" "<span>" "</span>"))
 (add-to-list 'web-mode-snippets '("html" "<html>" "</html>"))
