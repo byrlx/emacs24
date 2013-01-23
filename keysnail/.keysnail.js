@@ -23,7 +23,6 @@ key.suspendKey           = "<f2>";
 
 // ================================= Hooks ================================= //
 
-
 hook.setHook('KeyBoardQuit', function (aEvent) {
     if (key.currentKeySequence.length) return;
 
@@ -50,15 +49,16 @@ hook.setHook('KeyBoardQuit', function (aEvent) {
 });
 
 
+
 // ============================= Key bindings ============================== //
 
-key.setGlobalKey('C-M-r', function (ev) {
+key.setGlobalKey(['C-x', 'C-e'], function (ev) {
                 userscript.reload();
             }, 'Reload the initialization file', true);
 
-key.setGlobalKey('M-x', function (ev, arg) {
-                ext.select(arg, ev);
-            }, 'List exts and execute selected one', true);
+key.setGlobalKey('M-x', function (aEvent, aArg) {
+    ext.select(aArg, aEvent);
+}, 'List exts and execute selected one');
 
 key.setGlobalKey('M-:', function (ev) {
                 command.interpreter();
@@ -124,6 +124,14 @@ key.setGlobalKey(['C-x', 'C-s'], function (ev) {
                 saveDocument(window.content.document);
             }, 'Save current page to the file', true);
 
+key.setGlobalKey(['C-x', 'C-n'], function (ev) {
+                getBrowser().mTabContainer.advanceSelectedTab(1, true);
+            }, 'Select next tab');
+
+key.setGlobalKey(['C-x', 'C-b'], function (ev) {
+                getBrowser().mTabContainer.advanceSelectedTab(-1, true);
+            }, 'Select previous tab');
+
 key.setGlobalKey('M-w', function (ev) {
                 command.copyRegion(ev);
             }, 'Copy selected text', true);
@@ -147,14 +155,6 @@ key.setGlobalKey(['C-c', 'C-c', 'C-v'], function (ev) {
 key.setGlobalKey(['C-c', 'C-c', 'C-c'], function (ev) {
                 command.clearConsole();
             }, 'Clear Javascript console', true);
-
-key.setGlobalKey(['C-x', 'C-n'], function (ev) {
-                getBrowser().mTabContainer.advanceSelectedTab(1, true);
-            }, 'Select next tab');
-
-key.setGlobalKey(['C-x', 'C-b'], function (ev) {
-                getBrowser().mTabContainer.advanceSelectedTab(-1, true);
-            }, 'Select previous tab');
 
 key.setViewKey([['C-n'], ['j']], function (ev) {
                 key.generateKey(ev.originalTarget, KeyEvent.DOM_VK_DOWN, true);
@@ -228,9 +228,26 @@ key.setViewKey(['C-x', 'h'], function (ev) {
                 goDoCommand("cmd_selectAll");
             }, 'Select all', true);
 
-key.setViewKey('f', function (ev) {
-                command.focusElement(command.elementsRetrieverTextarea, 0);
-            }, 'Focus to the first textarea', true);
+plugins.options["hok.hint_keys"] = "0123456789";
+plugins.options["hok.hint_base_style"] = {
+    "position"       : 'absolute',
+    "z-index"        : '2147483647',
+    "color"          : '#000',
+    "font-family"    : 'monospace',
+    "font-size"      : '7pt',
+    "line-height"    : '10pt',
+    "padding"        : '2px',
+    "margin"         : '0px',
+    "text-transform" : 'lowercase'
+};
+plugins.options["hok.hint_color_link"]    = 'rgba(180, 255, 81, 0.7)';
+plugins.options["hok.hint_color_form"]    = 'rgba(157, 82, 255, 0.7)';
+plugins.options["hok.hint_color_focused"] = 'rgba(255, 82, 93, 0.7)';
+plugins.options["hok.selector"] = 'a, textarea, button';
+
+key.setViewKey('f', function (aEvent, aArg) {
+    ext.exec("hok-start-foreground-mode", aArg);
+}, 'Hok - Foreground hint mode', true);
 
 key.setViewKey('M-p', function (ev) {
                 command.walkInputElement(command.elementsRetrieverButton, true, true);
@@ -239,6 +256,14 @@ key.setViewKey('M-p', function (ev) {
 key.setViewKey('M-n', function (ev) {
                 command.walkInputElement(command.elementsRetrieverButton, false, true);
             }, 'Focus to the previous button');
+
+key.setViewKey('F', function (aEvent, aArg) {
+    ext.exec("hok-start-background-mode", aArg);
+}, 'HoK - Background hint mode', true);
+
+key.setViewKey('E', function (aEvent, aArg) {
+    ext.exec("hok-start-extended-mode", aArg);
+}, 'HoK - Extented hint mode', true);
 
 key.setEditKey(['C-x', 'h'], function (ev) {
                 command.selectAll(ev);
@@ -489,10 +514,6 @@ key.setCaretKey(['C-x', 'h'], function (ev) {
                 goDoCommand("cmd_selectAll");
             }, 'Select all', true);
 
-key.setCaretKey('f', function (ev) {
-                command.focusElement(command.elementsRetrieverTextarea, 0);
-            }, 'Focus to the first textarea', true);
-
 key.setCaretKey('M-p', function (ev) {
                 command.walkInputElement(command.elementsRetrieverButton, true, true);
             }, 'Focus to the next button');
@@ -500,3 +521,24 @@ key.setCaretKey('M-p', function (ev) {
 key.setCaretKey('M-n', function (ev) {
                 command.walkInputElement(command.elementsRetrieverButton, false, true);
             }, 'Focus to the previous button');
+
+key.setViewKey([':', 'b'], function (ev, arg) {
+    ext.exec("bmany-list-all-bookmarks", arg, ev);
+}, 'bmany - List all bookmarks');
+
+key.setViewKey([':', 'B'], function (ev, arg) {
+    ext.exec("bmany-list-bookmarklets", arg, ev);
+}, "bmany - List all bookmarklets");
+
+key.setViewKey([':', 'k'], function (ev, arg) {
+    ext.exec("bmany-list-bookmarks-with-keyword", arg, ev);
+}, "bmany - List bookmarks with keyword");
+
+key.setViewKey([':', 't'], function (ev, arg) {
+    ext.exec("bmany-list-bookmarks-with-tag", arg, ev);
+}, "bmany - List bookmarks with tag");
+plugins.options["bmany.default_open_type"] = "tab";
+
+key.setViewKey(['C-c', 'C-e'], function (aEvent, aArg) {
+    ext.exec("hok-start-foreground-mode", aArg);
+}, 'Hok - Foreground hint mode', true);
