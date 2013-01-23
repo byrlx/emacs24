@@ -1,20 +1,3 @@
-./a.out
-./a.out +one +three +two
-./a.out tew one four
-clear
-./a.out tew one four
-./a.out +hai ba +open
-exit
-cd /home/vuongnguyen/Desktop/PracticeQuestions/
-./a.out +b +c +a
-gcc ./A-type1.c 
-./a.out +b +c +a
-./a.out +a +e
-./a.out +e +a
-gcc ./A-type1.c 
-gcc ./A-type1.c 
-./a.out +e +a
-Num oclearf argv[]: 3
 clear
 exit
 cd /home/vuongnguyen/Desktop/PracticeQuestions/
@@ -125,4 +108,21 @@ exit
 cd /home/vuongnguyen/Desktop/Music/Taylor\ Swift/
 cd
 sudo pear channel-discovery pear.phpunit.de
+exit
+cd /home/vuongnguyen/Volume/
+cd
+firefox --app ~/conkeror/application.ini 
+cd /home/vuongnguyen/Home\ Folder/Emacs/
+cd
+firefox --app ~/conkeror/application.ini 
+exit
+cd /home/vuongnguyen/Home\ Folder/Emacs/
+firefox --app ~/conkeror/application.ini 
+exit
+cd /home/vuongnguyen/Home\ Folder/Emacs/
+firefox --app ~/conkeror/application.ini 
+firefox --app ~/conkeror/application.ini 
+exit
+cd /home/vuongnguyen/Workspace
+firefox --app ~/conkeror/application.ini 
 exit

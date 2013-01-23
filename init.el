@@ -26,6 +26,9 @@
 ;;; My location for external packages.
 (add-to-list 'load-path "~/.emacs.d/site-lisp")
 
+;;; Display Time
+(setq display-time-format "%H:%M")
+(display-time)
 
 ;;------------------------------------------------------------------------------
 ;;; Unbinding Mouse click and 4-arrow buttons
@@ -364,4 +367,10 @@ file of a buffer in an external program."
 (add-to-list 'web-mode-snippets '("span" "<span>" "</span>"))
 (add-to-list 'web-mode-snippets '("html" "<html>" "</html>"))
 (add-to-list 'web-mode-snippets '("p" "<p>" "</p>"))
+
+(add-to-list 'load-path "/home/vuongnguyen/.emacs.d/site-lisp")
+(require 'auto-complete-config)
+(add-to-list 'ac-dictionary-directories "/home/vuongnguyen/.emacs.d/site-lisp/ac-dict")
+(ac-config-default)
+
 
