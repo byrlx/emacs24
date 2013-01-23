@@ -368,6 +368,8 @@ file of a buffer in an external program."
 (add-to-list 'web-mode-snippets '("html" "<html>" "</html>"))
 (add-to-list 'web-mode-snippets '("p" "<p>" "</p>"))
 
+;;------------------------------------------------------------------------------
+;;; Auto-complete-mode
 (add-to-list 'load-path "/home/vuongnguyen/.emacs.d/site-lisp")
 (require 'auto-complete-config)
 (add-to-list 'ac-dictionary-directories "/home/vuongnguyen/.emacs.d/site-lisp/ac-dict")
