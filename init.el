@@ -58,7 +58,6 @@
 (desktop-save-mode 1)
 (setq large-file-warning-threshold nil) ; Disable message "File XXX is really big, really wants to open it"
 
-
 ;;------------------------------------------------------------------------------
 ;;; Set tab width
 (require 'cc-mode)
@@ -315,10 +314,8 @@ file of a buffer in an external program."
  '(ecb-tree-buffer-style (quote ascii-guides))
  '(fci-rule-color "#073642")
  '(inhibit-startup-screen t)
- '(openwith-associations (quote (("\\.pdf\\'" "evince" (file)) 
-					   ("\\.\\(?:xls?x\\|doc\\|docx\\|rtf\\|ppt\\|pptx\\)\\'" "soffice" (file))
-					   ("\\.\\(?:mpe?g\\|avi\\|wmv\\|mp4\\|mkv\\|mp3\\|wma\\|flac\\|mov\\|ape\\|m4a\\)\\'" "vlc" (file)) 
-					   ("\\.\\(?:jp?g\\|png\\)\\'" "eog" (file)))))
+ '(ns-function-modifier (quote control))
+ '(openwith-associations (quote (("\\.pdf\\'" "evince" (file)) ("\\.\\(?:xls?x\\|doc\\|docx\\|rtf\\|ppt\\|pptx\\)\\'" "soffice" (file)) ("\\.\\(?:mpe?g\\|avi\\|wmv\\|mp4\\|mkv\\|mp3\\|wma\\|flac\\|mov\\|ape\\|m4a\\)\\'" "vlc" (file)) ("\\.\\(?:jp?g\\|png\\)\\'" "eog" (file)))))
  '(openwith-confirm-invocation nil)
  '(sr-windows-default-ratio 66)
  '(tree-widget-image-enable t))
