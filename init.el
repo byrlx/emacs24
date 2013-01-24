@@ -162,6 +162,8 @@ smtpmail-debug-info t)
 (autoload 'save-current-configuration "revive" "Save status" t)
 (autoload 'resume "revive" "Resume Emacs" t)
 (autoload 'wipe "revive" "Wipe Emacs" t)
+(global-set-key (kbd "C-c C-o") 'save-current-configuration)
+(global-set-key (kbd "C-c C-p") 'resume)
 
 
 ;;------------------------------------------------------------------------------
