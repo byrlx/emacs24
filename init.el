@@ -29,7 +29,7 @@
 ;;; Display Time
 (setq display-time-format "%H:%M")
 (display-time)
-
+(setq message-log-max t)
 ;;------------------------------------------------------------------------------
 ;;; Unbinding Mouse click and 4-arrow buttons
 (dolist (k '([mouse-1] [down-mouse-1] [drag-mouse-1] [double-mouse-1] [triple-mouse-1]  
@@ -315,7 +315,10 @@ file of a buffer in an external program."
  '(fci-rule-color "#073642")
  '(inhibit-startup-screen t)
  '(ns-function-modifier (quote control))
- '(openwith-associations (quote (("\\.pdf\\'" "evince" (file)) ("\\.\\(?:xls?x\\|doc\\|docx\\|rtf\\|ppt\\|pptx\\)\\'" "soffice" (file)) ("\\.\\(?:mpe?g\\|avi\\|wmv\\|mp4\\|mkv\\|mp3\\|wma\\|flac\\|mov\\|ape\\|m4a\\)\\'" "vlc" (file)) ("\\.\\(?:jp?g\\|png\\)\\'" "eog" (file)))))
+ '(openwith-associations (quote (("\\.pdf\\'" "evince" (file))
+					   ("\\.\\(?:xls?x\\|doc\\|docx\\|rtf\\|ppt\\|pptx\\)\\'" "soffice" (file))
+					   ("\\.\\(?:mpe?g\\|avi\\|wmv\\|mp4\\|mkv\\|mp3\\|wma\\|flac\\|mov\\|ape\\|m4a\\)\\'" "vlc" (file))
+					   ("\\.\\(?:jp?g\\|png\\)\\'" "eog" (file)))))
  '(openwith-confirm-invocation nil)
  '(sr-windows-default-ratio 66)
  '(tree-widget-image-enable t))

@@ -1,128 +1,35 @@
+cd
 clear
 exit
-cd /home/vuongnguyen/Desktop/PracticeQuestions/
-./a.out +e +a +b +d
-gcc ./A-type1.c 
-exit
-cd /home/vuongnguyen/Desktop/PracticeQuestions/
-./a.out +e +a +b +d
-gcc ./A-type1.c 
-./a.out +e +a +b +d
-gcc ./A-type1.c 
-./a.out +e +a +b +d
-gcc ./A-type1.c 
-./a.out +e +a +b +d
-./a.out +e +a +b +d +y
-gcc ./A-type1.c 
-./a.out +e +a +b +d +y
-gcc ./A-type1.c 
-./a.out +e +a +b +d +y
-gcc ./A-type1.c 
-gcc ./A-type1.c 
-./a.out +e +a +b +d +y
-gcc ./A-type1.c 
-./a.out +e +a +b +d +y
-gcc ./A-type1.c 
-./a.out +e +a +b +d +y
-gcc ./A-type1.c 
-./a.out +e +a +b +d +y
-exit
-cd /home/vuongnguyen/Desktop/PracticeQuestions/
-./a.out +e +a +b +d +y
-exit
 cd /home/vuongnguyen/
-gcc A1.c 
-exit
-cd /home/vuongnguyen/
-gcc A1.c 
-exit
-cd /home/vuongnguyen/
-gcc A1.c 
-exit
-cd /home/vuongnguyen/
-gcc A1.c 
-./a.out +e +a +b +d +y
-exit
-cd /home/vuongnguyen
-ls
-cd Desktop/PracticeQuestions/
-gcc A-type7.c 
-./a.out
-cd /home/vuongnguyen/
-cd Desktop/PracticeQuestions/
-gcc A-type6.c 
-./a.out
-cd /home/vuongnguyen/Desktop/Music/The\ Best\ Song\ Book\ Of\ All\ Time\ 7CDs\ \(2005\)/Various\ Artists\ -\ The\ Best\ Song\ Book\ Of\ All\ Time\ Vol.7/
+firefox --app ~/conkeror/application.ini 
+firefox --app ~/conkeror/application.ini 
+firefox --app ~/conkeror/application.ini 
+firefox --app ~/conkeror/application.ini 
+cd /home/vuongnguyen/Home\ Folder/Conkeror/
+firefox --app ~/conkeror/application.ini 
+firefox --app ~/conkeror/application.ini 
+firefox --app ~/conkeror/application.ini 
+cd /home/vuongnguyen/.mozilla/firefox/n3qqzncp.default/
+firefox --app ~/conkeror/application.ini 
+cd /home/vuongnguyen/.mozilla/firefox/n3qqzncp.default/
+firefox --app ~/conkeror/application.ini 
+cd /home/vuongnguyen/.mozilla/firefox/n3qqzncp.default/
+firefox --app ~/conkeror/application.ini 
+cd /home/vuongnguyen/.mozilla/firefox/n3qqzncp.default/
+firefox --app ~/conkeror/application.ini 
+firefox --app ~/conkeror/application.ini 
+firefox --app ~/conkeror/application.ini 
+cd /home/vuongnguyen/.mozilla/firefox/n3qqzncp.default/
+firefox --app ~/conkeror/application.ini 
 clear
-cd
-exit
-cd /home/vuongnguyen/.emacs.d/
-git status
-git add .
-git status
-git --version
-git status
-git commit -am "message"
-git push github emacs24
-git push emacs24
-git remote v
-git remote add VuogNguyen https://github.com/VuogNguyen/Emacs.git
-git push
-git push VuogNguyen
-git push VuogNguyen
-git update-server-info
-git push VuogNguyen
-git remote add VuogNguyen git://github.com/VuogNguyen/emacs24.git
-exit
-cd /home/vuongnguyen/.emacs.d/
-git-init
-git status
-git add .
-git add
-git add *
-status
-git status
-git remote VuogNguyen git://github.com/VuogNguyen/emacs24.git
-git remote add VuogNguyen git://github.com/VuogNguyen/emacs24.git
-git push VuogNguyen master
-git remote add VuogNguyen git@github.com:VuogNguyen/emacs24.git
-exit
-cd /home/vuongnguyen/.emacs.d/
-git init
-ls
-ls -s
-clear
-git status
-git add .
-git status
-git remote VuogNguyen git@github.com:VuogNguyen/emacs24.git
-git remote add VuogNguyen git@github.com:VuogNguyen/emacs24.git
-git push VuogNguyen master
-exit
-cd /home/vuongnguyen/.emacs.d/
-git remote add vuongnguyen1909@gmail.com git@github.com:VuogNguyen/emacs24.git
-git push
-git push vuongnguyen1909@gmail.com
-git status
-exit
-cd /home/vuongnguyen/Desktop/Music/Taylor\ Swift/
-cd
-sudo pear channel-discovery pear.phpunit.de
-exit
-cd /home/vuongnguyen/Volume/
-cd
-firefox --app ~/conkeror/application.ini 
-cd /home/vuongnguyen/Home\ Folder/Emacs/
-cd
-firefox --app ~/conkeror/application.ini 
-exit
-cd /home/vuongnguyen/Home\ Folder/Emacs/
-firefox --app ~/conkeror/application.ini 
-exit
-cd /home/vuongnguyen/Home\ Folder/Emacs/
 firefox --app ~/conkeror/application.ini 
 firefox --app ~/conkeror/application.ini 
-exit
-cd /home/vuongnguyen/Workspace
 firefox --app ~/conkeror/application.ini 
-exit
+cd /home/vuongnguyen/.conkerorrc/
+firefox --app ~/conkeror/application.ini 
+cd /home/vuongnguyen/.mozilla/firefox/n3qqzncp.default/
+firefox --app ~/conkeror/application.ini 
+firefox --app ~/conkeror/application.ini 
+firefox --app ~/conkeror/application.ini 
+firefox --app ~/conkeror/application.ini 
