@@ -33,3 +33,5 @@ firefox --app ~/conkeror/application.ini
 firefox --app ~/conkeror/application.ini 
 firefox --app ~/conkeror/application.ini 
 firefox --app ~/conkeror/application.ini 
+cd /home/vuongnguyen/.conkerorrc/
+exit

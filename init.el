@@ -387,3 +387,6 @@ file of a buffer in an external program."
 (setq org-agenda-files (list "~/org/work.org"
                              "~/org/school.org" 
                              "~/org/home.org"))
+
+
+
