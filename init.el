@@ -363,7 +363,6 @@ file of a buffer in an external program."
 ;;------------------------------------------------------------------------------
 ;;; Auto-complete-mode
 
-;;------------------------------------------------------------------------------
 (add-to-list 'load-path
 	 "~/.emacs.d/site-lisp/yasnippet")
 (require 'yasnippet)
