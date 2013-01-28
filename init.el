@@ -362,11 +362,6 @@ file of a buffer in an external program."
 
 ;;------------------------------------------------------------------------------
 ;;; Auto-complete-mode
-(add-to-list 'load-path "/home/vuongnguyen/.emacs.d/site-lisp")
-(require 'auto-complete-config)
-(add-to-list 'ac-dictionary-directories "/home/vuongnguyen/.emacs.d/site-lisp/ac-dict")
-(ac-config-default)
-
 
 ;;------------------------------------------------------------------------------
 (add-to-list 'load-path
@@ -385,6 +380,13 @@ file of a buffer in an external program."
      "Use `yas/completing-prompt' for `yas/prompt-functions' but only here..."
        (let ((yas/prompt-functions '(yas/completing-prompt)))
              ad-do-it))
+
+
+
+(add-to-list 'load-path "/home/vuongnguyen/.emacs.d/site-lisp")
+(require 'auto-complete-config)
+(add-to-list 'ac-dictionary-directories "/home/vuongnguyen/.emacs.d/site-lisp/ac-dict")
+(ac-config-default)
 
 ;;-----------------------------------------------------------------------------
 ;;; Org-mode is a personal information management and outlining tool for Emacs
