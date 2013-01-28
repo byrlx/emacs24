@@ -236,14 +236,6 @@ smtpmail-debug-info t)
     (message "Aborting")))
 
 ;;------------------------------------------------------------------------------
-;; (add-to-list 'load-path
-;;		 "~/.emacs.d/site-lisp/yasnippet")
-;; (require 'yasnippet)
-;; (yas/global-mode 1)
-
-
-
-;;------------------------------------------------------------------------------
 ;;; Provide fast and easy way to access folder and buffers
 (add-to-list 'load-path
 		 "~/.emacs.d/site-lisp/lusty-explorer")
@@ -376,6 +368,24 @@ file of a buffer in an external program."
 (ac-config-default)
 
 
+;;------------------------------------------------------------------------------
+(add-to-list 'load-path
+	 "~/.emacs.d/site-lisp/yasnippet")
+(require 'yasnippet)
+(yas/global-mode 1)
+;; default TAB key is occupied by auto-complete
+(global-set-key (kbd "C-c ; u") 'yas/expand)
+;; default hotkey `C-c & C-s` is still valid
+(global-set-key (kbd "C-c ; s") 'yas/insert-snippet)
+;; give yas/dropdown-prompt in yas/prompt-functions a chance
+(require 'dropdown-list)
+;; use yas/completing-prompt when ONLY when `M-x yas/insert-snippet'
+;; thanks to capitaomorte for providing the trick.
+(defadvice yas/insert-snippet (around use-completing-prompt activate)
+     "Use `yas/completing-prompt' for `yas/prompt-functions' but only here..."
+       (let ((yas/prompt-functions '(yas/completing-prompt)))
+             ad-do-it))
+
 ;;-----------------------------------------------------------------------------
 ;;; Org-mode is a personal information management and outlining tool for Emacs
 (add-to-list 'load-path "/home/vuongnguyen/.emacs.d/org-mode")
@@ -387,6 +397,4 @@ file of a buffer in an external program."
 (setq org-agenda-files (list "~/org/work.org"
                              "~/org/school.org" 
                              "~/org/home.org"))
-
-
 
