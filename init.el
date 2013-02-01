@@ -252,6 +252,7 @@ smtpmail-debug-info t)
 (require 'sunrise-commander)
 (require 'sunrise-x-popviewer)
 (require 'sunrise-x-tree)
+
 (global-set-key (kbd "C-c e") 'sunrise-cd)
 
 

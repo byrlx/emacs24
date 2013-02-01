@@ -35,3 +35,29 @@ firefox --app ~/conkeror/application.ini
 firefox --app ~/conkeror/application.ini 
 cd /home/vuongnguyen/.conkerorrc/
 exit
+cd /home/vuongnguyen/
+ls
+chmod 755 my_script 
+./my_script 
+exit
+cd /home/vuongnguyen/
+./my_script 
+exit
+cd /home/vuongnguyen/
+./my_script 
+exit
+cd /home/vuongnguyen/
+./my_script 
+exit
+cd /home/vuongnguyen/
+./my_script 
+exit
+cd /home/vuongnguyen/Downloads/
+lxsplit -j AykeybizoE47.rar.001
+unrar e AykeybizoE47.rar
+lxsplit -j AykeybizoE48.rar.001
+ls
+unrar e AykeybizoE48.rar
+exit
+cd /home/vuongnguyen/Web-Pro/Yii/demos/helloworld/
+exit
