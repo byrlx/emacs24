@@ -61,3 +61,24 @@ unrar e AykeybizoE48.rar
 exit
 cd /home/vuongnguyen/Web-Pro/Yii/demos/helloworld/
 exit
+cd /home/vuongnguyen/Web-Pro/
+java -jar selenium-server-standalone-2.28.0.jar 
+cd /home/vuongnguyen/Web-Pro/blog/protected/tests/fixtures/
+exit
+cd /home/vuongnguyen/Web-Pro/
+java -jar selenium-server-standalone-2.28.0.jar 
+cd /home/vuongnguyen/Web-Pro/
+exit
+cd /home/vuongnguyen/Web-Pro/blog
+cd protected/tests/
+phpunit functional/SiteTest.php 
+phpunit functional/SiteTest.php 
+phpunit functional/SiteTest.php 
+exit
+cd /home/vuongnguyen/Web-Pro/blog/protected/tests/
+phpunit functional/SiteTest.php 
+pear install phpunit/phpunit_selenium
+exit
+cd /home/vuongnguyen/Web-Pro/blog/protected/tests
+phpunit functional/SiteTest.php 
+phpunit functional/SiteTest.php 
