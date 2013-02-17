@@ -400,38 +400,3 @@ file of a buffer in an external program."
 ;;-----------------------------------------------------------------------------
 ;;; phpunil.el -- Interact with PHPUnit
 (require 'phpunit)
-
-
-(defvar function-regexp
-  (concat
-   "^[ \t]*"                                   ; leading white space
-   "\\(public\\|private\\|protected\\|"        ; some of these 8 keywords
-   "abstract\\|final\\|static\\|"
-   "synchronized\\|native\\|void\\|int"
-   "\\|[ \t\n\r]\\)*"                          ; or whitespace
-   "[a-zA-Z0-9_$]+"                            ; return type
-   "[ \t\n\r]*[[]?[]]?"                        ; (could be array)
-   "[ \t\n\r]+"                                ; whitespace
-   "\\([a-zA-Z0-9_$]+\\)"                      ; the name we want!
-   "[ \t\n\r]*"                                ; optional whitespace
-   "("                                         ; open the param list
-   "\\([ \t\n\r]*"                             ; optional whitespace
-   "\\<[a-zA-Z0-9_$]+\\>"                      ; typename
-   "[ \t\n\r]*[[]?[]]?"                        ; (could be array)
-   "[ \t\n\r]+"                                ; whitespace
-   "\\<[a-zA-Z0-9_$]+\\>"                      ; variable name
-   "[ \t\n\r]*[[]?[]]?"                        ; (could be array)
-   "[ \t\n\r]*,?\\)*"                          ; opt whitespace and comma
-   "[ \t\n\r]*"                                ; optional whitespace
-   ")"                                         ; end the param list
-))
-
-(defun my:next-method()
-  (interactive)
-  (re-search-forward function-regexp nil t)
-)
-
-(defun my:prev-method()
-  (interactive)
-  (re-search-backward function-regexp nil t)
-)
