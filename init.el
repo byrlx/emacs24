@@ -299,13 +299,14 @@ file of a buffer in an external program."
  '(custom-safe-themes (quote ("e76dcc3da1acdbd6510a9df7a8846c6b1b8bb9a004be89b73e987fd1e61120f2" (default))))
  '(custom-theme-directory "~/.emacs.d/themes")
  '(ecb-layout-name "leftright2")
- '(ecb-layout-window-sizes (quote (("leftright2" (ecb-directories-buffer-name 0.10 . 0.5625) (ecb-sources-buffer-name 0.10 . 0.4166666666666667) (ecb-methods-buffer-name 0.16666666666666666 . 0.5625) (ecb-history-buffer-name 0.16666666666666666 . 0.4166666666666667)))))
+ '(ecb-layout-window-sizes (quote (("leftright2" (ecb-directories-buffer-name 0.1 . 0.5625) (ecb-sources-buffer-name 0.1 . 0.4166666666666667) (ecb-methods-buffer-name 0.16666666666666666 . 0.5625) (ecb-history-buffer-name 0.16666666666666666 . 0.4166666666666667)))))
  '(ecb-options-version "2.40")
  '(ecb-primary-secondary-mouse-buttons (quote mouse-1--C-mouse-1))
  '(ecb-source-path (quote ("/home/vuongnguyen/Workspace")))
  '(ecb-tip-of-the-day nil)
  '(ecb-tree-buffer-style (quote ascii-guides))
  '(fci-rule-color "#073642")
+ '(icicle-region-background "dark red")
  '(inhibit-startup-screen t)
  '(ns-function-modifier (quote control))
  '(openwith-associations (quote (("\\.pdf\\'" "evince" (file)) ("\\.\\(?:xls?x\\|doc\\|docx\\|rtf\\|ppt\\|pptx\\)\\'" "soffice" (file)) ("\\.\\(?:mpe?g\\|avi\\|wmv\\|mp4\\|mkv\\|mp3\\|wma\\|flac\\|mov\\|ape\\|m4a\\)\\'" "vlc" (file)) ("\\.\\(?:jp?g\\|png\\)\\'" "eog" (file)))))
@@ -400,3 +401,7 @@ file of a buffer in an external program."
 ;;-----------------------------------------------------------------------------
 ;;; phpunil.el -- Interact with PHPUnit
 (require 'phpunit)
+
+(require 'anything)
+(require 'anything-match-plugin)
+(require 'anything-config)
