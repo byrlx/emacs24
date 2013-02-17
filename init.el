@@ -402,6 +402,9 @@ file of a buffer in an external program."
 ;;; phpunil.el -- Interact with PHPUnit
 (require 'phpunit)
 
+
+;;-----------------------------------------------------------------------------
+;;; anything.el is a great application framework written by TamasPatrovics. It provides a totally new Emacs experience.
 (require 'anything)
 (require 'anything-match-plugin)
 (require 'anything-config)
