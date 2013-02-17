@@ -299,17 +299,10 @@ file of a buffer in an external program."
  '(custom-safe-themes (quote ("e76dcc3da1acdbd6510a9df7a8846c6b1b8bb9a004be89b73e987fd1e61120f2" (default))))
  '(custom-theme-directory "~/.emacs.d/themes")
  '(ecb-layout-name "leftright2")
- '(ecb-layout-window-sizes (quote (("leftright2" 
-						(ecb-directories-buffer-name 0.18181818181818182 . 0.6458333333333334) 
-						(ecb-sources-buffer-name 0.18181818181818182 . 0.3333333333333333) 
-						(ecb-methods-buffer-name 0.16666666666666666 . 0.6458333333333334) 
-						(ecb-history-buffer-name 0.16666666666666666 . 0.3333333333333333)) 
-					     ("left14" 
-						(ecb-directories-buffer-name 0.22857142857142856 . 0.717391304347826) 
-						(ecb-history-buffer-name 0.22857142857142856 . 0.2608695652173913)))))
+ '(ecb-layout-window-sizes (quote (("leftright2" (ecb-directories-buffer-name 0.10 . 0.5625) (ecb-sources-buffer-name 0.10 . 0.4166666666666667) (ecb-methods-buffer-name 0.16666666666666666 . 0.5625) (ecb-history-buffer-name 0.16666666666666666 . 0.4166666666666667)))))
  '(ecb-options-version "2.40")
  '(ecb-primary-secondary-mouse-buttons (quote mouse-1--C-mouse-1))
- '(ecb-source-path (quote (("/home/vuongnguyen" "vuongnguyen") "/home/vuongnguyen")))
+ '(ecb-source-path (quote ("/home/vuongnguyen/Workspace")))
  '(ecb-tip-of-the-day nil)
  '(ecb-tree-buffer-style (quote ascii-guides))
  '(fci-rule-color "#073642")
@@ -407,3 +400,38 @@ file of a buffer in an external program."
 ;;-----------------------------------------------------------------------------
 ;;; phpunil.el -- Interact with PHPUnit
 (require 'phpunit)
+
+
+(defvar function-regexp
+  (concat
+   "^[ \t]*"                                   ; leading white space
+   "\\(public\\|private\\|protected\\|"        ; some of these 8 keywords
+   "abstract\\|final\\|static\\|"
+   "synchronized\\|native\\|void\\|int"
+   "\\|[ \t\n\r]\\)*"                          ; or whitespace
+   "[a-zA-Z0-9_$]+"                            ; return type
+   "[ \t\n\r]*[[]?[]]?"                        ; (could be array)
+   "[ \t\n\r]+"                                ; whitespace
+   "\\([a-zA-Z0-9_$]+\\)"                      ; the name we want!
+   "[ \t\n\r]*"                                ; optional whitespace
+   "("                                         ; open the param list
+   "\\([ \t\n\r]*"                             ; optional whitespace
+   "\\<[a-zA-Z0-9_$]+\\>"                      ; typename
+   "[ \t\n\r]*[[]?[]]?"                        ; (could be array)
+   "[ \t\n\r]+"                                ; whitespace
+   "\\<[a-zA-Z0-9_$]+\\>"                      ; variable name
+   "[ \t\n\r]*[[]?[]]?"                        ; (could be array)
+   "[ \t\n\r]*,?\\)*"                          ; opt whitespace and comma
+   "[ \t\n\r]*"                                ; optional whitespace
+   ")"                                         ; end the param list
+))
+
+(defun my:next-method()
+  (interactive)
+  (re-search-forward function-regexp nil t)
+)
+
+(defun my:prev-method()
+  (interactive)
+  (re-search-backward function-regexp nil t)
+)
