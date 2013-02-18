@@ -296,6 +296,7 @@ file of a buffer in an external program."
  ;; If there is more than one, they won't work right.
  '(ansi-color-faces-vector [default bold shadow italic underline bold bold-italic bold])
  '(ansi-color-names-vector (vector "#839496" "#dc322f" "#859900" "#b58900" "#268bd2" "#d33682" "#2aa198" "#002b36"))
+ '(bongo-enabled-backends (quote (vlc)))
  '(custom-safe-themes (quote ("e76dcc3da1acdbd6510a9df7a8846c6b1b8bb9a004be89b73e987fd1e61120f2" (default))))
  '(custom-theme-directory "~/.emacs.d/themes")
  '(ecb-layout-name "leftright2")
@@ -408,3 +409,9 @@ file of a buffer in an external program."
 (require 'anything)
 (require 'anything-match-plugin)
 (require 'anything-config)
+
+;;-----------------------------------------------------------------------------
+;;; Bongo is a flexible and usable media player for GNU Emacs.
+(add-to-list 'load-path "~/.emacs.d/site-lisp/bongo")
+(autoload 'bongo "bongo"
+  "Start Bongo by switching to a Bongo buffer." t)
