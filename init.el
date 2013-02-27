@@ -49,7 +49,7 @@
 (global-set-key (kbd "M-k") 'kill-this-buffer) ; Kill the current buffer
 (global-set-key (kbd "C-x C-e") 'eval-buffer)
 
-(menu-bar-mode 0) ; Toggle the Menu Bar  
+;(menu-bar-mode 0) ; Toggle the Menu Bar  
 (tool-bar-mode 0) ; Toggle the Tool bar
 (setq make-backup-files nil) ; stop creating those backup~ files
 (setq auto-save-default nil) ; stop creating those #autosave# files
@@ -61,8 +61,8 @@
 ;;------------------------------------------------------------------------------
 ;;; Set tab width
 (require 'cc-mode)
-(setq-default c-basic-offset 6
-tab-width 6
+(setq-default c-basic-offset 3
+tab-width 3
 indent-tabs-mode t
 c-default-style "linux") ;;;automatic indentation
 
@@ -297,13 +297,13 @@ file of a buffer in an external program."
  '(ansi-color-faces-vector [default bold shadow italic underline bold bold-italic bold])
  '(ansi-color-names-vector (vector "#839496" "#dc322f" "#859900" "#b58900" "#268bd2" "#d33682" "#2aa198" "#002b36"))
  '(bongo-enabled-backends (quote (mpg123 vlc mplayer ogg123 speexdec timidity mikmod)))
- '(custom-safe-themes (quote ("e76dcc3da1acdbd6510a9df7a8846c6b1b8bb9a004be89b73e987fd1e61120f2" (default))))
+ '(custom-safe-themes (quote ("4aee8551b53a43a883cb0b7f3255d6859d766b6c5e14bcb01bed572fcbef4328" (default))))
  '(custom-theme-directory "~/.emacs.d/themes")
  '(ecb-layout-name "leftright2")
  '(ecb-layout-window-sizes (quote (("leftright2" (ecb-directories-buffer-name 0.1 . 0.5625) (ecb-sources-buffer-name 0.1 . 0.4166666666666667) (ecb-methods-buffer-name 0.16666666666666666 . 0.5625) (ecb-history-buffer-name 0.16666666666666666 . 0.4166666666666667)))))
  '(ecb-options-version "2.40")
  '(ecb-primary-secondary-mouse-buttons (quote mouse-1--C-mouse-1))
- '(ecb-source-path (quote ("/opt/lampp/htdocs/trackstar/")))
+ '(ecb-source-path (quote ("/home/vuongnguyen/Workspace/Trackstar/" "/home/vuongnguyen/Workspace")))
  '(ecb-tip-of-the-day nil)
  '(ecb-tree-buffer-style (quote ascii-guides))
  '(fci-rule-color "#073642")
@@ -316,8 +316,8 @@ file of a buffer in an external program."
  '(tree-widget-image-enable t))
 
 ;; Theming selection for Emacs 24
-(load-theme 'darkclean)
-;(load-theme 'sanityinc-solarized-dark)
+;(load-theme 'darkclean)
+(load-theme 'sanityinc-solarized-dark)
 ;(load-theme 'sanityinc-solarized-light)
 
 
@@ -337,29 +337,6 @@ file of a buffer in an external program."
  '(web-mode-html-tag-face ((t (:foreground "dark gray")))))
 
 
-;;-----------------------------------------------------------------------------
-;;; web-mode.el --- Web-mode environment for web development on emacs
-(require 'web-mode) 
-(setq auto-mode-alist (cons '("\\.php$" . web-mode) auto-mode-alist))
-(setq auto-mode-alist (cons '("\\.aspx$" . web-mode) auto-mode-alist))
-(add-to-list 'auto-mode-alist '("\\.phtml\\'" . web-mode)) 
-(add-to-list 'auto-mode-alist '("\\.tpl\\.php\\'" . web-mode)) 
-(add-to-list 'auto-mode-alist '("\\.jsp\\'" . web-mode)) 
-(add-to-list 'auto-mode-alist '("\\.as[cp]x\\'" . web-mode)) 
-(add-to-list 'auto-mode-alist '("\\.erb\\'" . web-mode))
-(add-to-list 'auto-mode-alist '("\\.html?\\'" . web-mode))
-
-(defun web-mode-hook () "Hooks for Web mode." 
-  (setq web-mode-markup-indent-offset 4)
-  (setq web-mode-css-indent-offset 4)
-  (setq web-mode-code-indent-offset 4)) 
-(add-hook 'web-mode-hook 'web-mode-hook)
-
-(add-to-list 'web-mode-snippets '("div" "<div>" "</div>"))
-(add-to-list 'web-mode-snippets '("span" "<span>" "</span>"))
-(add-to-list 'web-mode-snippets '("html" "<html>" "</html>"))
-(add-to-list 'web-mode-snippets '("p" "<p>" "</p>"))
-
 ;;------------------------------------------------------------------------------
 ;;; Auto-complete-mode
 
@@ -368,9 +345,9 @@ file of a buffer in an external program."
 (require 'yasnippet)
 (yas/global-mode 1)
 ;; default TAB key is occupied by auto-complete
-(global-set-key (kbd "C-c ; u") 'yas/expand)
+(global-set-key (kbd "C-c k") 'yas/expand)
 ;; default hotkey `C-c & C-s` is still valid
-(global-set-key (kbd "C-c ; s") 'yas/insert-snippet)
+(global-set-key (kbd "C-c l") 'yas/insert-snippet)
 ;; give yas/dropdown-prompt in yas/prompt-functions a chance
 (require 'dropdown-list)
 ;; use yas/completing-prompt when ONLY when `M-x yas/insert-snippet'
@@ -415,3 +392,8 @@ file of a buffer in an external program."
 (add-to-list 'load-path "~/.emacs.d/site-lisp/bongo")
 (autoload 'bongo "bongo"
   "Start Bongo by switching to a Bongo buffer." t)
+
+
+;;-----------------------------------------------------------------------------
+;;; nXHTML - Emacs Utilities for Web Development
+(load "/home/vuongnguyen/.emacs.d/site-lisp/nxhtml/autostart.el")

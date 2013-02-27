@@ -1,71 +1,3 @@
-firefox --app ~/conkeror/application.ini 
-firefox --app ~/conkeror/application.ini 
-cd /home/vuongnguyen/.mozilla/firefox/n3qqzncp.default/
-firefox --app ~/conkeror/application.ini 
-clear
-firefox --app ~/conkeror/application.ini 
-firefox --app ~/conkeror/application.ini 
-firefox --app ~/conkeror/application.ini 
-cd /home/vuongnguyen/.conkerorrc/
-firefox --app ~/conkeror/application.ini 
-cd /home/vuongnguyen/.mozilla/firefox/n3qqzncp.default/
-firefox --app ~/conkeror/application.ini 
-firefox --app ~/conkeror/application.ini 
-firefox --app ~/conkeror/application.ini 
-firefox --app ~/conkeror/application.ini 
-cd /home/vuongnguyen/.conkerorrc/
-exit
-cd /home/vuongnguyen/
-ls
-chmod 755 my_script 
-./my_script 
-exit
-cd /home/vuongnguyen/
-./my_script 
-exit
-cd /home/vuongnguyen/
-./my_script 
-exit
-cd /home/vuongnguyen/
-./my_script 
-exit
-cd /home/vuongnguyen/
-./my_script 
-exit
-cd /home/vuongnguyen/Downloads/
-lxsplit -j AykeybizoE47.rar.001
-unrar e AykeybizoE47.rar
-lxsplit -j AykeybizoE48.rar.001
-ls
-unrar e AykeybizoE48.rar
-exit
-cd /home/vuongnguyen/Web-Pro/Yii/demos/helloworld/
-exit
-cd /home/vuongnguyen/Web-Pro/
-java -jar selenium-server-standalone-2.28.0.jar 
-cd /home/vuongnguyen/Web-Pro/blog/protected/tests/fixtures/
-exit
-cd /home/vuongnguyen/Web-Pro/
-java -jar selenium-server-standalone-2.28.0.jar 
-cd /home/vuongnguyen/Web-Pro/
-exit
-cd /home/vuongnguyen/Web-Pro/blog
-cd protected/tests/
-phpunit functional/SiteTest.php 
-phpunit functional/SiteTest.php 
-phpunit functional/SiteTest.php 
-exit
-cd /home/vuongnguyen/Web-Pro/blog/protected/tests/
-phpunit functional/SiteTest.php 
-pear install phpunit/phpunit_selenium
-exit
-cd /home/vuongnguyen/Web-Pro/blog/protected/tests
-phpunit functional/SiteTest.php 
-phpunit functional/SiteTest.php 
-cd /home/vuongnguyen/Downloads/
-exit
-cd /home/vuongnguyen/Downloads/
-tar -zxvf ecb-2.40.tar.gz 
 ls
 clea
 exit
@@ -125,4 +57,72 @@ cd /home/vuongnguyen/Workspace/Link\ to\ trackstar/protected/config/
 exit
 cd /home/vuongnguyen/Workspace/Link\ to\ trackstar/protected/tests/
 phpunit unit/
+exit
+cd /home/vuongnguyen/Downloads/
+ls
+unzip code_w1.zip 
+ls
+cd week1/
+ls
+exit
+cd /home/vuongnguyen/
+cd Workspace/idea-IC-123.169/
+/bin
+exit
+cd /home/vuongnguyen/
+cd Workspace/idea-IC-123.169/bin/
+./idea.sh 
+exit
+cd /home/vuongnguyen/
+cd Workspace/idea-IC-123.169/bin/
+./idea.sh 
+cd /home/vuongnguyen/Workspace/Programming\ C++/
+exit
+cd /home/vuongnguyen/Workspace/Programming\ C++/
+g++ Test.cpp -o he
+./he
+exit
+cd /home/vuongnguyen/Workspace/Pro\ Technique
+./he
+g++ Test.cpp -o he
+exit
+cd /home/vuongnguyen/Workspace/Programming\ C++/
+g++ Test.cpp -o he
+./he
+exit
+cd /home/vuongnguyen/Workspace/Programming\ C++/Week01/
+exit
+cd /home/vuongnguyen/Workspace
+ssh s3343854@mekong.rmit.edu.vn
+cd /home/vuongnguyen/Workspace/Pro\ Technique/
+ls
+cd s3343854-a2/
+ls
+make
+./a.out
+./gjc
+./gjc medu.dat submenu.dat
+./gjc menu.date submenu.dat
+./gjc menu.dat submenu.dat
+./gjc menu.dat submenu.dat
+4
+cd/pro
+fuck vuong
+ls
+cd
+cd Workspace/Pro\ Technique/
+ls
+tree
+ls
+cd s3343854-a1
+ls
+./gjc 
+./a.out
+./a
+make
+./a1
+ls
+a1.c
+cd a1.c
+ls
 exit
