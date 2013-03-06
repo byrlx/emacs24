@@ -297,7 +297,7 @@ file of a buffer in an external program."
  '(ansi-color-faces-vector [default bold shadow italic underline bold bold-italic bold])
  '(ansi-color-names-vector (vector "#839496" "#dc322f" "#859900" "#b58900" "#268bd2" "#d33682" "#2aa198" "#002b36"))
  '(bongo-enabled-backends (quote (mpg123 vlc mplayer ogg123 speexdec timidity mikmod)))
- '(custom-safe-themes (quote ("fc5fcb6f1f1c1bc01305694c59a1a861b008c534cae8d0e48e4d5e81ad718bc6" "4aee8551b53a43a883cb0b7f3255d6859d766b6c5e14bcb01bed572fcbef4328" (default))))
+ '(custom-safe-themes (quote ("fc5fcb6f1f1c1bc01305694c59a1a861b008c534cae8d0e48e4d5e81ad718bc6" (default))))
  '(custom-theme-directory "~/.emacs.d/themes")
  '(custom-theme-load-path (quote ("/home/vuongnguyen/.emacs.d/themes/emacs-color-theme-solarized" custom-theme-directory t)))
  '(ecb-layout-name "leftright2")
@@ -311,16 +311,19 @@ file of a buffer in an external program."
  '(icicle-region-background "dark red")
  '(inhibit-startup-screen t)
  '(ns-function-modifier (quote control))
- '(openwith-associations (quote (("\\.pdf\\'" "evince" (file)) ("\\.\\(?:xls?x\\|doc\\|docx\\|rtf\\|ppt\\|pptx\\)\\'" "soffice" (file)) ("\\.\\(?:mpe?g\\|avi\\|wmv\\|mp4\\|mkv\\|mp3\\|wma\\|flac\\|mov\\|ape\\|m4a\\)\\'" "vlc" (file)) ("\\.\\(?:jp?g\\|png\\)\\'" "eog" (file)))))
+ '(openwith-associations (quote (("\\.pdf\\'" "evince" (file)) 
+											("\\.\\(?:xls?x\\|doc\\|docx\\|rtf\\|ppt\\|pptx\\)\\'" "soffice" (file)) 
+											("\\.\\(?:mpe?g\\|avi\\|wmv\\|mp4\\|mkv\\|mp3\\|wma\\|flac\\|mov\\|ape\\|m4a\\)\\'" "vlc" (file)) 
+											("\\.\\(?:jp?g\\|png\\)\\'" "eog" (file)))))
  '(openwith-confirm-invocation nil)
  '(sr-windows-default-ratio 66)
  '(tree-widget-image-enable t))
 
 ;; Theming selection for Emacs 24
 ;(load-theme 'darkclean)
-(load-theme 'sanityinc-solarized-dark)
+;(load-theme 'sanityinc-solarized-dark)
 ;(load-theme 'sanityinc-solarized-light)
-;(load-theme 'solarized-dark-theme)
+(load-theme 'solarized-dark)
 ;;------------------------------------------------------------------------------
 ;;; openwith.el --- Open files in file explorer-mode with external programs
 (require 'openwith)

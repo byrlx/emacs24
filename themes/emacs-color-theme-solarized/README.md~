@@ -174,6 +174,3 @@ Here are some things to keep in mind when submitting a bug report:
 *   also if you’re using a terminal, try running Emacs in GUI mode, and see if the problem exists there (if it does, report the bug that way, if not, just mention that it’s a terminal-only bug),
 *   it’s very helpful (but not expected) if you can compare it to a similar situation in VIM (especially if you know the VIM highlight name or have a screenshot), and
 *  `M-x customize-apropos-faces` can help you find all the relevant faces if you are submitting faces for a mode.
-
-
-* /home/vuongnguyen/.emacs.d/elpa/color-theme-sanityinc-solarized-2.21/

@@ -286,7 +286,7 @@ the \"Gen RGB\" column in solarized-definitions.el to improve them further."
               ((t (,@fmt-bold ,@fg-green))))
              (font-lock-keyword-face ((t (,@fmt-bold ,@fg-green)))) ; Statementz
              (font-lock-string-face ((t (,@fmt-bold ,@fg-cyan)))) ; Constant
-             (font-lock-type-face ((t (,@fmt-none ,@fg-yellow)))) ; Type
+             (font-lock-type-face ((t (,@fmt-ital ,@fg-yellow)))) ; Type
              (font-lock-variable-name-face ; Identifier
               ((t (,@fmt-none ,@fg-blue))))
              (font-lock-warning-face ((t (,@fmt-bold ,@fg-red)))) ; Error
