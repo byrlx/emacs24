@@ -1,15 +1,3 @@
-ls
-clea
-exit
-cd /home/vuongnguyen/Music
-cd
-cd Web-Pro/
-Yii/framework/yiic webapp trackstar
-exit
-cd /home/vuongnguyen/Workspace/Link\ to\ trackstar/protected/tests/unit/
-exit
-cd /home/vuongnguyen/Workspace/Link\ to\ trackstar/protected/tests/
-phpunit unit/DbTest.php 
 exit
 cd /home/vuongnguyen/Workspace/Link\ to\ trackstar/protected/tests/
 phpunit unit/DbTest.php 
@@ -125,4 +113,16 @@ ls
 a1.c
 cd a1.c
 ls
+exit
+cd /home/vuongnguyen/Workspace/Trackstar/protected/tests/unit/
+exit
+cd /home/vuongnguyen/
+exit
+cd /home/vuongnguyen/Workspace/Trackstar/protected/tests/unit/
+cd
+cd Pictures/
+tree
+.tree
+/tree
+man tree
 exit

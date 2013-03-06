@@ -297,8 +297,9 @@ file of a buffer in an external program."
  '(ansi-color-faces-vector [default bold shadow italic underline bold bold-italic bold])
  '(ansi-color-names-vector (vector "#839496" "#dc322f" "#859900" "#b58900" "#268bd2" "#d33682" "#2aa198" "#002b36"))
  '(bongo-enabled-backends (quote (mpg123 vlc mplayer ogg123 speexdec timidity mikmod)))
- '(custom-safe-themes (quote ("4aee8551b53a43a883cb0b7f3255d6859d766b6c5e14bcb01bed572fcbef4328" (default))))
+ '(custom-safe-themes (quote ("fc5fcb6f1f1c1bc01305694c59a1a861b008c534cae8d0e48e4d5e81ad718bc6" "4aee8551b53a43a883cb0b7f3255d6859d766b6c5e14bcb01bed572fcbef4328" (default))))
  '(custom-theme-directory "~/.emacs.d/themes")
+ '(custom-theme-load-path (quote ("/home/vuongnguyen/.emacs.d/themes/emacs-color-theme-solarized" custom-theme-directory t)))
  '(ecb-layout-name "leftright2")
  '(ecb-layout-window-sizes (quote (("leftright2" (ecb-directories-buffer-name 0.1 . 0.5625) (ecb-sources-buffer-name 0.1 . 0.4166666666666667) (ecb-methods-buffer-name 0.16666666666666666 . 0.5625) (ecb-history-buffer-name 0.16666666666666666 . 0.4166666666666667)))))
  '(ecb-options-version "2.40")
@@ -319,8 +320,7 @@ file of a buffer in an external program."
 ;(load-theme 'darkclean)
 (load-theme 'sanityinc-solarized-dark)
 ;(load-theme 'sanityinc-solarized-light)
-
-
+;(load-theme 'solarized-dark-theme)
 ;;------------------------------------------------------------------------------
 ;;; openwith.el --- Open files in file explorer-mode with external programs
 (require 'openwith)
@@ -334,7 +334,7 @@ file of a buffer in an external program."
  '(sr-active-path-face ((t (:background "dim gray" :foreground "white" :weight bold :height 130))))
  '(sr-highlight-path-face ((t nil)))
  '(sr-passive-path-face ((t (:background "dim gray" :foreground "dark gray" :weight bold :height 130))))
- '(web-mode-html-tag-face ((t (:foreground "dark gray")))))
+ '(web-mode-html-tag-face ((t (:foreground "dark gray"))) t))
 
 
 ;;------------------------------------------------------------------------------
