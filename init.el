@@ -14,14 +14,14 @@
 
 ;;; Setup initial emacs frames (windows) location and size
 ;; (setq default-frame-alist
-  ;;    '((wait-for-wm . nil)
+;;    '((wait-for-wm . nil)
 ;;	(top . 0) (left . 0)
 ;;	(width . 85) (height . 40)
 ;;	(background-color . "gray15")
 ;;	(foreground-color . "limegreen")
 ;;	(cursor-color . "LightGoldenrod")
 ;;	(mouse-color . "yellow")
-  ;;      )) 
+;;      )) 
 
 ;;; My location for external packages.
 (add-to-list 'load-path "~/.emacs.d/site-lisp")
@@ -37,7 +37,7 @@
              [mouse-3] [down-mouse-3] [drag-mouse-3] [double-mouse-3] [triple-mouse-3]
              [mouse-4] [down-mouse-4] [drag-mouse-4] [double-mouse-4] [triple-mouse-4]
              [mouse-5] [down-mouse-5] [drag-mouse-5] [double-mouse-5] [triple-mouse-5]
-		 [left] [right] [up] [down] [C-down-mouse-3]))
+				 [left] [right] [up] [down] [C-down-mouse-3]))
   (global-unset-key k)) 
 (global-unset-key (kbd "<C-down-mouse-1>"))
 (defalias 'yes-or-no-p 'y-or-n-p)
@@ -48,8 +48,8 @@
 (global-set-key (kbd "<C-tab>") 'other-window)
 (global-set-key (kbd "M-k") 'kill-this-buffer) ; Kill the current buffer
 (global-set-key (kbd "C-x C-e") 'eval-buffer)
-
-;(menu-bar-mode 0) ; Toggle the Menu Bar  
+(global-set-key (kbd "C-c =") 'imenu)
+													 ;(menu-bar-mode 0) ; Toggle the Menu Bar  
 (tool-bar-mode 0) ; Toggle the Tool bar
 (setq make-backup-files nil) ; stop creating those backup~ files
 (setq auto-save-default nil) ; stop creating those #autosave# files
@@ -62,9 +62,9 @@
 ;;; Set tab width
 (require 'cc-mode)
 (setq-default c-basic-offset 3
-tab-width 3
-indent-tabs-mode t
-c-default-style "linux") ;;;automatic indentation
+				  tab-width 3
+				  indent-tabs-mode t
+				  c-default-style "linux") ;;;automatic indentation
 
 ;;------------------------------------------------------------------------------
 ;;; Excellent package for better scrolling in emacs
@@ -115,7 +115,7 @@ c-default-style "linux") ;;;automatic indentation
 ;;------------------------------------------------------------------------------
 ;;; ECB for loading speedbar
 (add-to-list 'load-path "~/.emacs.d/ecb")
-;(load-file "~/.emacs.d/ecb/ecb.el")
+													 ;(load-file "~/.emacs.d/ecb/ecb.el")
 (require 'ecb)
 (require 'ecb-autoloads)
 (setq stack-trace-on-error t)
@@ -143,15 +143,15 @@ c-default-style "linux") ;;;automatic indentation
 ;;Tell Emacs about your mail server and credentials
 
 (setq send-mail-function 'smtpmail-send-it
-message-send-mail-function 'smtpmail-send-it
-smtpmail-starttls-credentials
-'(("smtp.gmail.com" 587 nil nil))
-smtpmail-auth-credentials
-(expand-file-name "~/.emacs.d/site-lisp/.authinfo")
-smtpmail-default-smtp-server "smtp.gmail.com"
-smtpmail-smtp-server "smtp.gmail.com"
-smtpmail-smtp-service 587
-smtpmail-debug-info t)
+		message-send-mail-function 'smtpmail-send-it
+		smtpmail-starttls-credentials
+		'(("smtp.gmail.com" 587 nil nil))
+		smtpmail-auth-credentials
+		(expand-file-name "~/.emacs.d/site-lisp/.authinfo")
+		smtpmail-default-smtp-server "smtp.gmail.com"
+		smtpmail-smtp-server "smtp.gmail.com"
+		smtpmail-smtp-service 587
+		smtpmail-debug-info t)
 (require 'smtpmail)
 
 ;;------------------------------------------------------------------------------
@@ -171,10 +171,10 @@ smtpmail-debug-info t)
 (defun toggle-fullscreen ()
   (interactive)
   (x-send-client-message nil 0 nil "_NET_WM_STATE" 32
-	    		 '(2 "_NET_WM_STATE_MAXIMIZED_VERT" 0))
+								 '(2 "_NET_WM_STATE_MAXIMIZED_VERT" 0))
   (x-send-client-message nil 0 nil "_NET_WM_STATE" 32
-	    		 '(2 "_NET_WM_STATE_MAXIMIZED_HORZ" 0))
-)
+								 '(2 "_NET_WM_STATE_MAXIMIZED_HORZ" 0))
+  )
 (toggle-fullscreen)
 
 
@@ -197,16 +197,16 @@ smtpmail-debug-info t)
 (require 'package)
 (package-initialize)
 (add-to-list 'package-archives 
-		 '("melpa" . "http://melpa.milkbox.net/packages/")
-		 'APPEND)
+				 '("melpa" . "http://melpa.milkbox.net/packages/")
+				 'APPEND)
 
 (setq package-archives '(("ELPA" . "http://tromey.com/elpa/") 
-                          ("gnu" . "http://elpa.gnu.org/packages/")
-                          ("marmalade" . "http://marmalade-repo.org/packages/")))
+								 ("gnu" . "http://elpa.gnu.org/packages/")
+								 ("marmalade" . "http://marmalade-repo.org/packages/")))
 (load "~/.emacs.d/site-lisp/icicles-install")
 (add-to-list 'load-path "~/.emacs.d/site-lisp/icicles")
-(require 'icicles)
-(icicle-mode 1)
+													 ;(require 'icicles)
+													 ;(icicle-mode 1)
 
 
 ;;------------------------------------------------------------------------------
@@ -226,7 +226,7 @@ smtpmail-debug-info t)
 (global-set-key (kbd "C-x C-r") 'ido-recentf-open)
 ;; enable recent files mode.
 (recentf-mode t)
-; 5 files ought to be enough.
+													 ; 5 files ought to be enough.
 (setq recentf-max-saved-items 4)
 (defun ido-recentf-open ()
   "Use `ido-completing-read' to \\[find-file] a recent file"
@@ -237,18 +237,18 @@ smtpmail-debug-info t)
 
 ;;------------------------------------------------------------------------------
 ;;; Provide fast and easy way to access folder and buffers
-(add-to-list 'load-path
-		 "~/.emacs.d/site-lisp/lusty-explorer")
-(require 'lusty-explorer)
-(global-set-key (kbd "C-c l") 'lusty-file-explorer)
-(global-set-key (kbd "C-x b") 'lusty-buffer-explorer)
+													 ;(add-to-list 'load-path
+													 ;		 "~/.emacs.d/site-lisp/lusty-explorer")
+													 ;(require 'lusty-explorer)
+													 ;(global-set-key (kbd "C-c l") 'lusty-file-explorer)
+													 ;(global-set-key (kbd "C-x b") 'lusty-buffer-explorer)
 
 
 
 ;;------------------------------------------------------------------------------
 ;;; Provide a powerful file explorer
 (add-to-list 'load-path
-		 "~/.emacs.d/site-lisp/sunrise-commander")
+				 "~/.emacs.d/site-lisp/sunrise-commander")
 (require 'sunrise-commander)
 (require 'sunrise-x-popviewer)
 (require 'sunrise-x-tree)
@@ -273,9 +273,9 @@ file of a buffer in an external program."
                     (if (eq system-type 'darwin)
                         "open"
                       (read-shell-command "Open current file with: "))
-                    " "
+						  n                    " "
                     buffer-file-name)))
-)
+  )
 (global-set-key (kbd "C-c o") 'prelude-open-with)
 
 
@@ -319,10 +319,12 @@ file of a buffer in an external program."
  '(sr-windows-default-ratio 66)
  '(tree-widget-image-enable t))
 
+(setq ido-decorations '("\n=> " "" "\n" "" "[" "]" " [No match]" " [Matched]" " [Not readable]" " [Too big]" " [Confirm]"))
+
 ;; Theming selection for Emacs 24
-;(load-theme 'darkclean)
-;(load-theme 'sanityinc-solarized-dark)
-;(load-theme 'sanityinc-solarized-light)
+													 ;(load-theme 'darkclean)
+													 ;(load-theme 'sanityinc-solarized-dark)
+													 ;(load-theme 'sanityinc-solarized-light)
 (load-theme 'solarized-dark)
 ;;------------------------------------------------------------------------------
 ;;; openwith.el --- Open files in file explorer-mode with external programs
@@ -344,30 +346,63 @@ file of a buffer in an external program."
 ;;; Auto-complete-mode
 
 (add-to-list 'load-path
-	 "~/.emacs.d/site-lisp/yasnippet")
+				 "~/.emacs.d/site-lisp/yasnippet")
 (require 'yasnippet)
 (yas/global-mode 1)
 ;; default TAB key is occupied by auto-complete
 (global-set-key (kbd "C-c k") 'yas/expand)
-;; default hotkey `C-c & C-s` is still valid
-(global-set-key (kbd "C-c l") 'yas/insert-snippet)
+
 ;; give yas/dropdown-prompt in yas/prompt-functions a chance
-(require 'dropdown-list)
+													 ;(require 'dropdown-list)
 ;; use yas/completing-prompt when ONLY when `M-x yas/insert-snippet'
 ;; thanks to capitaomorte for providing the trick.
-(defadvice yas/insert-snippet (around use-completing-prompt activate)
-     "Use `yas/completing-prompt' for `yas/prompt-functions' but only here..."
-       (let ((yas/prompt-functions '(yas/completing-prompt)))
-             ad-do-it))
+													 ;(defadvice yas/insert-snippet (around use-completing-prompt activate)
+													 ;    "Use `yas/completing-prompt' for `yas/prompt-functions' but only here..."
+													 ;     (let ((yas/prompt-functions '(yas/completing-prompt)))
+													 ;          ad-do-it))
 
+
+
+;; (add-to-list 'load-path "/home/vuongnguyen/.emacs.d/site-lisp")
+;; (require 'auto-complete-config)
+;; (add-to-list 'ac-dictionary-directories "/home/vuongnguyen/.emacs.d/site-lisp/ac-dict")
+;; (ac-config-default)
+;; (ac-set-trigger-key "<tab>")
+
+;; (add-to-list 'load-path "~/.emacs.d/site-lisp/auto-complete-clang")	;add it to load-path
+;; (require 'auto-complete-clang)
+;; ;;; TODO: find another way to bind key for ac-complete-clang only in c mode
+;; (global-set-key (kbd "C-c C-?") 'ac-complete-clang)
 
 
 (add-to-list 'load-path "/home/vuongnguyen/.emacs.d/site-lisp")
 (require 'auto-complete-config)
 (add-to-list 'ac-dictionary-directories "/home/vuongnguyen/.emacs.d/site-lisp/ac-dict")
-(ac-config-default)
 
-;;-----------------------------------------------------------------------------
+
+(add-to-list 'load-path "~/.emacs.d/site-lisp/auto-complete-clang")	;add it to load-path
+(require 'auto-complete-clang)
+
+(setq ac-auto-start nil)
+(setq ac-quick-help-delay 0.5)
+(ac-set-trigger-key "<tab>")
+(defun my-ac-config ()
+(interactive)
+  (setq-default ac-sources '(ac-source-abbrev ac-source-dictionary ac-source-words-in-same-mode-buffers))
+  (add-hook 'emacs-lisp-mode-hook 'ac-emacs-lisp-mode-setup)
+  (add-hook 'c-mode-common-hook 'ac-cc-mode-setup)
+  (add-hook 'ruby-mode-hook 'ac-ruby-mode-setup)
+  (add-hook 'css-mode-hook 'ac-css-mode-setup)
+  (add-hook 'auto-complete-mode-hook 'ac-common-setup)
+  (global-auto-complete-mode t))
+(defun my-ac-cc-mode-setup ()
+(interactive)
+  (setq ac-sources (append '(ac-source-clang ac-source-yasnippet) ac-sources)))
+(add-hook 'c-mode-common-hook 'my-ac-cc-mode-setup)
+;; ac-source-gtags
+(my-ac-config)
+
+;;--------------------------------------------------------------------
 ;;; Org-mode is a personal information management and outlining tool for Emacs
 (add-to-list 'load-path "/home/vuongnguyen/.emacs.d/org-mode")
 (require 'org-install)
@@ -400,3 +435,12 @@ file of a buffer in an external program."
 ;;-----------------------------------------------------------------------------
 ;;; nXHTML - Emacs Utilities for Web Development
 (load "/home/vuongnguyen/.emacs.d/site-lisp/nxhtml/autostart.el")
+
+(ido-mode '1)
+;;-----------------------------------------------------------------------------
+;;; ido-ubiquitous.el --- Use ido (nearly) everywhere.
+(require 'ido-ubiquitous)
+(require 'smex) ; Not needed if you use package.el
+(smex-initialize) ; Can be omitted. This might cause a (minimal) delay
+													 ; when Smex is auto-initialized on its first run.
+(ido-ubiquitous-mode)
