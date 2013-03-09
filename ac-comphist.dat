@@ -1,4 +1,6 @@
-((("ido-ubiquitous-mode" .
+((("defvar" .
+	[0 0 1 0 0 0])
+  ("ido-ubiquitous-mode" .
 	[0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0])
   ("ido-ubiquitous" .
 	[0 0 0 1 1 0 0 0 0 0 0 0 0 0])
