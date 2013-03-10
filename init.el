@@ -352,28 +352,6 @@ file of a buffer in an external program."
 ;; default TAB key is occupied by auto-complete
 (global-set-key (kbd "C-c k") 'yas/expand)
 
-;; give yas/dropdown-prompt in yas/prompt-functions a chance
-													 ;(require 'dropdown-list)
-;; use yas/completing-prompt when ONLY when `M-x yas/insert-snippet'
-;; thanks to capitaomorte for providing the trick.
-													 ;(defadvice yas/insert-snippet (around use-completing-prompt activate)
-													 ;    "Use `yas/completing-prompt' for `yas/prompt-functions' but only here..."
-													 ;     (let ((yas/prompt-functions '(yas/completing-prompt)))
-													 ;          ad-do-it))
-
-
-
-;; (add-to-list 'load-path "/home/vuongnguyen/.emacs.d/site-lisp")
-;; (require 'auto-complete-config)
-;; (add-to-list 'ac-dictionary-directories "/home/vuongnguyen/.emacs.d/site-lisp/ac-dict")
-;; (ac-config-default)
-;; (ac-set-trigger-key "<tab>")
-
-;; (add-to-list 'load-path "~/.emacs.d/site-lisp/auto-complete-clang")	;add it to load-path
-;; (require 'auto-complete-clang)
-;; ;;; TODO: find another way to bind key for ac-complete-clang only in c mode
-;; (global-set-key (kbd "C-c C-?") 'ac-complete-clang)
-
 (require 'auto-complete-config)
 (add-to-list 'ac-dictionary-directories "/home/vuongnguyen/.emacs.d/site-lisp/ac-dict")
 (ac-config-default)
@@ -382,22 +360,9 @@ file of a buffer in an external program."
 
 (add-to-list 'load-path "~/.emacs.d/site-lisp/auto-complete-clang")	;add it to load-path
 (require 'auto-complete-clang)
-(setq ac-clang-flags
-      (mapcar (lambda (item)(concat "-I" item))
-              (split-string
-               "
- /usr/include/c++/4.6
- /usr/include/c++/4.6/x86_64-linux-gnu/.
- /usr/include/c++/4.6/backward
- /usr/lib/gcc/x86_64-linux-gnu/4.6.1/include
- /usr/local/include
- /usr/lib/gcc/x86_64-linux-gnu/4.6.1/include-fixed
- /usr/include/x86_64-linux-gnu
- /usr/include
-"
-               )))
 (setq clang-completion-suppress-error 't)
-(global-set-key (kbd "C-`") 'ac-complete-clang)
+(global-set-key (kbd "C-c .") 'ac-complete-clang)
+
 ;;--------------------------------------------------------------------
 ;;; Org-mode is a personal information management and outlining tool for Emacs
 (add-to-list 'load-path "/home/vuongnguyen/.emacs.d/org-mode")
