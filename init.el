@@ -343,7 +343,8 @@ file of a buffer in an external program."
 
 
 ;;------------------------------------------------------------------------------
-;;; Auto-complete-mode
+;;; Auto-complete-mode + Auto-complete-clang
+
 (add-to-list 'load-path
 				 "~/.emacs.d/site-lisp/yasnippet")
 (require 'yasnippet)
@@ -360,7 +361,8 @@ file of a buffer in an external program."
 (add-to-list 'load-path "~/.emacs.d/site-lisp/auto-complete-clang")	;add it to load-path
 (require 'auto-complete-clang)
 (setq clang-completion-suppress-error 't)
-(global-set-key (kbd "C-c .") 'ac-complete-clang)
+(global-set-key (kbd "<backtab>") 'ac-complete-clang)
+
 
 ;;--------------------------------------------------------------------
 ;;; Org-mode is a personal information management and outlining tool for Emacs
