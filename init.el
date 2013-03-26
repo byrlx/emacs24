@@ -32,14 +32,14 @@
 (setq message-log-max t)
 ;;------------------------------------------------------------------------------
 ;;; Unbinding Mouse click and 4-arrow buttons
-(dolist (k '([mouse-1] [down-mouse-1] [drag-mouse-1] [double-mouse-1] [triple-mouse-1]  
-             [mouse-2] [down-mouse-2] [drag-mouse-2] [double-mouse-2] [triple-mouse-2]
-             [mouse-3] [down-mouse-3] [drag-mouse-3] [double-mouse-3] [triple-mouse-3]
-             [mouse-4] [down-mouse-4] [drag-mouse-4] [double-mouse-4] [triple-mouse-4]
-             [mouse-5] [down-mouse-5] [drag-mouse-5] [double-mouse-5] [triple-mouse-5]
-				 [left] [right] [up] [down] [C-down-mouse-3]))
-  (global-unset-key k)) 
-(global-unset-key (kbd "<C-down-mouse-1>"))
+;; (dolist (k '([mouse-1] [down-mouse-1] [drag-mouse-1] [double-mouse-1] [triple-mouse-1]  
+;;              [mouse-2] [down-mouse-2] [drag-mouse-2] [double-mouse-2] [triple-mouse-2]
+;;              [mouse-3] [down-mouse-3] [drag-mouse-3] [double-mouse-3] [triple-mouse-3]
+;;              [mouse-4] [down-mouse-4] [drag-mouse-4] [double-mouse-4] [triple-mouse-4]
+;;              [mouse-5] [down-mouse-5] [drag-mouse-5] [double-mouse-5] [triple-mouse-5]
+;; 				 [left] [right] [up] [down] [C-down-mouse-3]))
+;;   (global-unset-key k)) 
+;; (global-unset-key (kbd "<C-down-mouse-1>"))
 (defalias 'yes-or-no-p 'y-or-n-p)
 (global-linum-mode 1) 
 (scroll-bar-mode 0) ; Disable scroll bar mode
@@ -49,7 +49,7 @@
 (global-set-key (kbd "M-k") 'kill-this-buffer) ; Kill the current buffer
 (global-set-key (kbd "C-x C-e") 'eval-buffer)
 (global-set-key (kbd "C-c =") 'imenu)
-													 ;(menu-bar-mode 0) ; Toggle the Menu Bar  
+(menu-bar-mode 1) ; Toggle the Menu Bar  
 (tool-bar-mode 0) ; Toggle the Tool bar
 (setq make-backup-files nil) ; stop creating those backup~ files
 (setq auto-save-default nil) ; stop creating those #autosave# files
@@ -304,7 +304,7 @@ file of a buffer in an external program."
  '(ecb-layout-window-sizes (quote (("leftright2" (ecb-directories-buffer-name 0.1 . 0.5625) (ecb-sources-buffer-name 0.1 . 0.4166666666666667) (ecb-methods-buffer-name 0.16666666666666666 . 0.5625) (ecb-history-buffer-name 0.16666666666666666 . 0.4166666666666667)))))
  '(ecb-options-version "2.40")
  '(ecb-primary-secondary-mouse-buttons (quote mouse-1--C-mouse-1))
- '(ecb-source-path (quote ("/home/vuongnguyen/Workspace/Trackstar/" "/home/vuongnguyen/Workspace")))
+ '(ecb-source-path (quote ("/home/vuongnguyen/Workspace/Trackstar/" "/home/vuongnguyen/Workspace" "/home/vuongnguyen/Workspace/Programming C++")))
  '(ecb-tip-of-the-day nil)
  '(ecb-tree-buffer-style (quote ascii-guides))
  '(fci-rule-color "#073642")
@@ -396,9 +396,9 @@ file of a buffer in an external program."
 
 
 ;;-----------------------------------------------------------------------------
-;;; nXHTML - Emacs Utilities for Web Development
+;;; nXHTML - Emacs Utilities for Web 
 ;(load "/home/vuongnguyen/.emacs.d/site-lisp/nxhtml/autostart.el")
-
+;(setq mumamo-background-colors nil)
 (ido-mode '1)
 ;;-----------------------------------------------------------------------------
 ;;; ido-ubiquitous.el --- Use ido (nearly) everywhere.
@@ -410,24 +410,25 @@ file of a buffer in an external program."
 
 ;;-----------------------------------------------------------------------------
 ;;; web-mode.el --- Web-mode environment for web development on emacs
-(require 'web-mode) 
-(setq auto-mode-alist (cons '("\\.php$" . web-mode) auto-mode-alist))
-(setq auto-mode-alist (cons '("\\.aspx$" . web-mode) auto-mode-alist))
-(add-to-list 'auto-mode-alist '("\\.phtml\\'" . web-mode)) 
-(add-to-list 'auto-mode-alist '("\\.tpl\\.php\\'" . web-mode)) 
-(add-to-list 'auto-mode-alist '("\\.jsp\\'" . web-mode)) 
-(add-to-list 'auto-mode-alist '("\\.as[cp]x\\'" . web-mode)) 
-(add-to-list 'auto-mode-alist '("\\.erb\\'" . web-mode))
-(add-to-list 'auto-mode-alist '("\\.html?\\'" . web-mode))
+;; (require 'web-mode) 
+;; (setq auto-mode-alist (cons '("\\.php$" . web-mode) auto-mode-alist))
+;; (setq auto-mode-alist (cons '("\\.aspx$" . web-mode) auto-mode-alist))
+;; (setq auto-mode-alist (cons '("\\.html$" . web-mode) auto-mode-alist))
+;; (add-to-list 'auto-mode-alist '("\\.phtml\\'" . web-mode)) 
+;; (add-to-list 'auto-mode-alist '("\\.tpl\\.php\\'" . web-mode)) 
+;; (add-to-list 'auto-mode-alist '("\\.jsp\\'" . web-mode)) 
+;; (add-to-list 'auto-mode-alist '("\\.as[cp]x\\'" . web-mode)) 
+;; (add-to-list 'auto-mode-alist '("\\.erb\\'" . web-mode))
+;; (add-to-list 'auto-mode-alist '("\\.html?\\'" . web-mode))
 
-(defun web-mode-hook () "Hooks for Web mode." 
-  (setq web-mode-markup-indent-offset 4)
-  (setq web-mode-css-indent-offset 4)
-  (setq web-mode-code-indent-offset 4)) 
-(add-hook 'web-mode-hook 'web-mode-hook)
+;; (defun web-mode-hook () "Hooks for Web mode." 
+;;   (setq web-mode-markup-indent-offset 4)
+;;   (setq web-mode-css-indent-offset 4)
+;;   (setq web-mode-code-indent-offset 4)) 
+;; (add-hook 'web-mode-hook 'web-mode-hook)
 
-(add-to-list 'web-mode-snippets '("div" "<div>" "</div>"))
-(add-to-list 'web-mode-snippets '("span" "<span>" "</span>"))
-(add-to-list 'web-mode-snippets '("html" "<html>" "</html>"))
-(add-to-list 'web-mode-snippets '("p" "<p>" "</p>"))
+;; (add-to-list 'web-mode-snippets '("div" "<div>" "</div>"))
+;; (add-to-list 'web-mode-snippets '("span" "<span>" "</span>"))
+;; (add-to-list 'web-mode-snippets '("html" "<html>" "</html>"))
+;; (add-to-list 'web-mode-snippets '("p" "<p>" "</p>"))
 

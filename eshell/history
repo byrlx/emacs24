@@ -2,19 +2,6 @@ phpunit unit/DbTest.php
 exit
 cd /home/vuongnguyen/Workspace/Link\ to\ trackstar/protected/tests/
 phpunit unit/DbTest.php 
-exit
-cd /home/vuongnguyen/Workspace/Link\ to\ trackstar/protected/tests/
-phpunit unit/DbTest.php 
-exit
-cd /home/vuongnguyen/Workspace/Link\ to\ trackstar/protected/tests/
-phpunit unit/DbTest.php 
-exit
-cd /home/vuongnguyen/Workspace/Link\ to\ trackstar/protected/tests/
-phpunit unit/DbTest.php 
-phpunit unit/DbTest.php 
-exit
-cd /home/vuongnguyen/Workspace/Link\ to\ trackstar/protected/tests/
-phpunit unit/DbTest.php 
 phpunit unit/
 phpunit unit/DbTest.php 
 phpunit unit/
@@ -125,4 +112,17 @@ exir
 exit
 cd /home/vuongnguyen/Workspace/Netbean\ Project/
 tar -xvf javafx_scenebuilder-1_1-beta-b21-linux-i586-14_feb_2013.tar.gz 
+exit
+cd /home/vuongnguyen/Downloads/
+unzip Yeah_Yeah_Text_Msg.zip 
+rm Yeah_Yeah_Text_Msg.zip
+ls
+tree
+unzip Sweet_Sms_Ever.zip 
+unzip Sony_Messge_Sweet.zip 
+exit
+cd /home/vuongnguyen/Downloads
+unzip Sms_In_Japanese.zip 
+ls
+unzip Msg_Notice.zip 
 exit
