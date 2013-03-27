@@ -410,25 +410,25 @@ file of a buffer in an external program."
 
 ;;-----------------------------------------------------------------------------
 ;;; web-mode.el --- Web-mode environment for web development on emacs
-;; (require 'web-mode) 
-;; (setq auto-mode-alist (cons '("\\.php$" . web-mode) auto-mode-alist))
-;; (setq auto-mode-alist (cons '("\\.aspx$" . web-mode) auto-mode-alist))
-;; (setq auto-mode-alist (cons '("\\.html$" . web-mode) auto-mode-alist))
-;; (add-to-list 'auto-mode-alist '("\\.phtml\\'" . web-mode)) 
-;; (add-to-list 'auto-mode-alist '("\\.tpl\\.php\\'" . web-mode)) 
-;; (add-to-list 'auto-mode-alist '("\\.jsp\\'" . web-mode)) 
-;; (add-to-list 'auto-mode-alist '("\\.as[cp]x\\'" . web-mode)) 
-;; (add-to-list 'auto-mode-alist '("\\.erb\\'" . web-mode))
-;; (add-to-list 'auto-mode-alist '("\\.html?\\'" . web-mode))
+(require 'web-mode) 
+(setq auto-mode-alist (cons '("\\.php$" . web-mode) auto-mode-alist))
+(setq auto-mode-alist (cons '("\\.aspx$" . web-mode) auto-mode-alist))
+(setq auto-mode-alist (cons '("\\.html$" . web-mode) auto-mode-alist))
+(add-to-list 'auto-mode-alist '("\\.phtml\\'" . web-mode)) 
+(add-to-list 'auto-mode-alist '("\\.tpl\\.php\\'" . web-mode)) 
+(add-to-list 'auto-mode-alist '("\\.jsp\\'" . web-mode)) 
+(add-to-list 'auto-mode-alist '("\\.as[cp]x\\'" . web-mode)) 
+(add-to-list 'auto-mode-alist '("\\.erb\\'" . web-mode))
+(add-to-list 'auto-mode-alist '("\\.html?\\'" . web-mode))
 
-;; (defun web-mode-hook () "Hooks for Web mode." 
-;;   (setq web-mode-markup-indent-offset 4)
-;;   (setq web-mode-css-indent-offset 4)
-;;   (setq web-mode-code-indent-offset 4)) 
-;; (add-hook 'web-mode-hook 'web-mode-hook)
+(defun web-mode-hook () "Hooks for Web mode." 
+  (setq web-mode-markup-indent-offset 4)
+  (setq web-mode-css-indent-offset 4)
+  (setq web-mode-code-indent-offset 4)) 
+(add-hook 'web-mode-hook 'web-mode-hook)
 
-;; (add-to-list 'web-mode-snippets '("div" "<div>" "</div>"))
-;; (add-to-list 'web-mode-snippets '("span" "<span>" "</span>"))
-;; (add-to-list 'web-mode-snippets '("html" "<html>" "</html>"))
-;; (add-to-list 'web-mode-snippets '("p" "<p>" "</p>"))
+(add-to-list 'web-mode-snippets '("div" "<div>" "</div>"))
+(add-to-list 'web-mode-snippets '("span" "<span>" "</span>"))
+(add-to-list 'web-mode-snippets '("html" "<html>" "</html>"))
+(add-to-list 'web-mode-snippets '("p" "<p>" "</p>"))
 
