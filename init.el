@@ -398,7 +398,7 @@ file of a buffer in an external program."
 
 ;;-----------------------------------------------------------------------------
 ;;; nXHTML - Emacs Utilities for Web 
-(load "/home/vuongnguyen/.emacs.d/site-lisp/nxhtml/autostart.el")
+(load "~/.emacs.d/site-lisp/nxhtml/autostart.el")
 (setq mumamo-background-colors nil)
 (ido-mode '1)
 ;;-----------------------------------------------------------------------------

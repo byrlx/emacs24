@@ -1,15 +1,3 @@
-phpunit unit/
-phpunit unit/DbTest.php 
-phpunit unit/
-exit
-cd /home/vuongnguyen/Workspace/Link\ to\ trackstar/protected/tests/
-phpunit unit/
-exit
-cd /home/vuongnguyen/Workspace/Link\ to\ trackstar/protected/config/
-exit
-cd /home/vuongnguyen/Workspace/Link\ to\ trackstar/protected/tests/
-phpunit unit/
-exit
 cd /home/vuongnguyen/Downloads/
 ls
 unzip code_w1.zip 
@@ -126,3 +114,15 @@ cd /home/vuongnguyen/Workspace/Programming\ C++/Week03/
 exit
 cd /home/vuongnguyen/Documents/
 exit
+cd /home/vuongnguyen/Downloads/
+exot
+exit
+cd /home/vuongnguyen/Downloads/
+ls
+tar -xzf apel-10.7.tar.gz 
+ls
+cd apel-10.7/
+ls
+make
+ls
+vim README.en
