@@ -311,7 +311,7 @@ file of a buffer in an external program."
  '(icicle-region-background "dark red")
  '(inhibit-startup-screen t)
  '(ns-function-modifier (quote control))
- '(openwith-associations (quote (("\\.pdf\\'" "evince" (file)) ("\\.\\(?:xls?x\\|doc\\|docx\\|rtf\\|ppt\\|pptx\\)\\'" "soffice" (file)) ("\\.\\(?:mpe?g\\|avi\\|wmv\\|mp4\\|mkv\\)\\'" "smplayer" (file)) ("\\.\\(?:mp3\\|wma\\|flac\\|mov\\|ape\\|m4a\\)\\'" "smplayer" (file)) ("\\.\\(?:jp?g\\|png\\)\\'" "eog" (file)))))
+ '(openwith-associations (quote (("\\.pdf\\'" "evince" (file)) ("\\.\\(?:xls?x\\|doc\\|docx\\|rtf\\|ppt\\|pptx\\)\\'" "soffice" (file)) ("\\.\\(?:mpe?g\\|avi\\|wmv\\|mp4\\|mkv\\)\\'" "smplayer" (file)) ("\\.\\(?:mp3\\|wma\\|flac\\|mov\\|ape\\|m4a\\)\\'" "smplayer" (file)) ("\\.\\(?:jp?g\\|png\\)\\'" "shotwell" (file)))))
  '(openwith-confirm-invocation nil)
  '(sr-windows-default-ratio 66)
  '(tree-widget-image-enable t)
