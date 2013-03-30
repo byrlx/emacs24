@@ -1,8 +1,6 @@
 phpunit unit/
 phpunit unit/DbTest.php 
 phpunit unit/
-phpunit unit/DbTest.php 
-phpunit unit/
 exit
 cd /home/vuongnguyen/Workspace/Link\ to\ trackstar/protected/tests/
 phpunit unit/
@@ -126,3 +124,5 @@ cd /home/vuongnguyen/.emacs.d
 exit
 cd /home/vuongnguyen/Workspace/Programming\ C++/Week03/
 exit
+cd /home/vuongnguyen/Documents/
+exit
