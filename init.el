@@ -49,7 +49,7 @@
 (global-set-key (kbd "M-k") 'kill-this-buffer) ; Kill the current buffer
 (global-set-key (kbd "C-x C-e") 'eval-buffer)
 (global-set-key (kbd "C-c =") 'imenu)
-(menu-bar-mode 1) ; Toggle the Menu Bar  
+(menu-bar-mode 0) ; Toggle the Menu Bar  
 (tool-bar-mode 0) ; Toggle the Tool bar
 (setq make-backup-files nil) ; stop creating those backup~ files
 (setq auto-save-default nil) ; stop creating those #autosave# files
@@ -312,7 +312,7 @@ file of a buffer in an external program."
  '(inhibit-startup-screen t)
  '(ns-function-modifier (quote control))
  '(openwith-associations (quote (("\\.pdf\\'" "evince" (file)) 
-											("\\.\\(?:xls?x\\|doc\\|docx\\|rtf\\|ppt\\|pptx\\)\\'" "soffice" (file)) 
+											("\\.\\(?:xls?x\\|doc\\|docx\\|rtf\\|ppt\\|pptx\\)\\'" "libreoffice4.0"  (file)) 
 											("\\.\\(?:mpe?g\\|avi\\|wmv\\|mp4\\|mkv\\)\\'" "smplayer" (file)) 
 											("\\.\\(?:mp3\\|wma\\|flac\\|mov\\|ape\\|m4a\\)\\'" "smplayer" (file)) 
 											("\\.\\(?:jp?g\\|png\\)\\'" "shotwell" (file)))))
@@ -432,4 +432,5 @@ file of a buffer in an external program."
 ;; (add-to-list 'web-mode-snippets '("span" "<span>" "</span>"))
 ;; (add-to-list 'web-mode-snippets '("html" "<html>" "</html>"))
 ;; (add-to-list 'web-mode-snippets '("p" "<p>" "</p>"))
+
 

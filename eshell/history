@@ -1,6 +1,3 @@
-cd /home/vuongnguyen/Downloads/
-ls
-unzip code_w1.zip 
 ls
 cd week1/
 ls
@@ -126,3 +123,6 @@ ls
 make
 ls
 vim README.en
+cd /home/vuongnguyen/Downloads/
+unzip documents-export-2013-04-04.zip 
+exit

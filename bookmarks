@@ -2,7 +2,12 @@
 ;;; This format is meant to be slightly human-readable;
 ;;; nevertheless, you probably don't want to edit it.
 ;;; -*- End Of Bookmark File Format Version Stamp -*-
-(("conkeror.init"
+(("media"
+ (filename . "/media/")
+ (front-context-string)
+ (rear-context-string . "96 Mar  5 11:35 ")
+ (position . 196))
+("conkeror.init"
  (filename . "~/.conkerorrc/init.js")
  (front-context-string . "//allow for 'con")
  (rear-context-string)
