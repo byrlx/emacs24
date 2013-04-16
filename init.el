@@ -300,6 +300,7 @@ file of a buffer in an external program."
  '(custom-safe-themes (quote ("fc5fcb6f1f1c1bc01305694c59a1a861b008c534cae8d0e48e4d5e81ad718bc6" (default))))
  '(custom-theme-directory "~/.emacs.d/themes")
  '(custom-theme-load-path (quote ("/home/vuongnguyen/.emacs.d/themes/emacs-color-theme-solarized" custom-theme-directory t)))
+ '(ecb-compile-window-height 10)
  '(ecb-layout-name "leftright2")
  '(ecb-layout-window-sizes (quote (("leftright2" (ecb-directories-buffer-name 0.1 . 0.5625) (ecb-sources-buffer-name 0.1 . 0.4166666666666667) (ecb-methods-buffer-name 0.16666666666666666 . 0.5625) (ecb-history-buffer-name 0.16666666666666666 . 0.4166666666666667)))))
  '(ecb-options-version "2.40")
@@ -311,11 +312,7 @@ file of a buffer in an external program."
  '(icicle-region-background "dark red")
  '(inhibit-startup-screen t)
  '(ns-function-modifier (quote control))
- '(openwith-associations (quote (("\\.pdf\\'" "evince" (file)) 
-											("\\.\\(?:xls?x\\|doc\\|docx\\|rtf\\|ppt\\|pptx\\)\\'" "libreoffice4.0"  (file)) 
-											("\\.\\(?:mpe?g\\|avi\\|wmv\\|mp4\\|mkv\\)\\'" "smplayer" (file)) 
-											("\\.\\(?:mp3\\|wma\\|flac\\|mov\\|ape\\|m4a\\)\\'" "smplayer" (file)) 
-											("\\.\\(?:jp?g\\|png\\)\\'" "shotwell" (file)))))
+ '(openwith-associations (quote (("\\.pdf\\'" "evince" (file)) ("\\.\\(?:xls?x\\|doc\\|docx\\|rtf\\|ppt\\|pptx\\)\\'" "libreoffice4.0" (file)) ("\\.\\(?:mpe?g\\|avi\\|wmv\\|mp4\\|mkv\\)\\'" "smplayer" (file)) ("\\.\\(?:mp3\\|wma\\|flac\\|mov\\|ape\\|m4a\\)\\'" "smplayer" (file)) ("\\.\\(?:jp?g\\|png\\)\\'" "shotwell" (file)))))
  '(openwith-confirm-invocation nil)
  '(sr-windows-default-ratio 66)
  '(tree-widget-image-enable t)
@@ -433,4 +430,14 @@ file of a buffer in an external program."
 ;; (add-to-list 'web-mode-snippets '("html" "<html>" "</html>"))
 ;; (add-to-list 'web-mode-snippets '("p" "<p>" "</p>"))
 
+(require 'flymake)
+(autoload 'flymake-find-file-hook "flymake" "" t)
+(add-hook 'find-file-hook 'flymake-find-file-hook)
+(setq flymake-gui-warnings-enabled nil)
+(setq flymake-log-level 1)
 
+;; Customize how flymake displays the errors
+'(flymake-errline ((((class color)) (:underline "OrangeRed"))))
+'(flymake-warnline ((((class color)) (:underline "yellow"))))
+
+(server-start)
