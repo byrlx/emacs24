@@ -305,7 +305,7 @@ file of a buffer in an external program."
  '(ecb-layout-window-sizes (quote (("leftright2" (ecb-directories-buffer-name 0.1 . 0.5625) (ecb-sources-buffer-name 0.1 . 0.4166666666666667) (ecb-methods-buffer-name 0.16666666666666666 . 0.5625) (ecb-history-buffer-name 0.16666666666666666 . 0.4166666666666667)))))
  '(ecb-options-version "2.40")
  '(ecb-primary-secondary-mouse-buttons (quote mouse-1--C-mouse-1))
- '(ecb-source-path (quote ("/home/vuongnguyen/Workspace/Trackstar/" "/home/vuongnguyen/Workspace" "/home/vuongnguyen/Workspace/Programming C++")))
+ '(ecb-source-path (quote ("/home/vuongnguyen/Workspace/Trackstar/" "/home/vuongnguyen/Workspace" "/home/vuongnguyen/Workspace/Programming C++" "/opt/lampp/htdocs/Wordpress/wp-content/themes/myTheme")))
  '(ecb-tip-of-the-day nil)
  '(ecb-tree-buffer-style (quote ascii-guides))
  '(fci-rule-color "#073642")
@@ -430,14 +430,18 @@ file of a buffer in an external program."
 ;; (add-to-list 'web-mode-snippets '("html" "<html>" "</html>"))
 ;; (add-to-list 'web-mode-snippets '("p" "<p>" "</p>"))
 
-(require 'flymake)
-(autoload 'flymake-find-file-hook "flymake" "" t)
-(add-hook 'find-file-hook 'flymake-find-file-hook)
-(setq flymake-gui-warnings-enabled nil)
-(setq flymake-log-level 1)
+;; (require 'flymake)
+;; (autoload 'flymake-find-file-hook "flymake" "" t)
+;; (add-hook 'find-file-hook 'flymake-find-file-hook)
+;; (setq flymake-gui-warnings-enabled nil)
+;; (setq flymake-log-level 1)
 
-;; Customize how flymake displays the errors
-'(flymake-errline ((((class color)) (:underline "OrangeRed"))))
-'(flymake-warnline ((((class color)) (:underline "yellow"))))
+;; ;; Customize how flymake displays the errors
+;; '(flymake-errline ((((class color)) (:underline "OrangeRed"))))
+;; '(flymake-warnline ((((class color)) (:underline "yellow"))))
 
-(server-start)
+(require 'markdown-mode)
+(autoload 'markdown-mode "markdown-mode"
+   "Major mode for editing Markdown files" t)
+(add-to-list 'auto-mode-alist '("\\.markdown\\'" . markdown-mode))
+(add-to-list 'auto-mode-alist '("\\.md\\'" . markdown-mode))
