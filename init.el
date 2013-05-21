@@ -445,3 +445,13 @@ file of a buffer in an external program."
    "Major mode for editing Markdown files" t)
 (add-to-list 'auto-mode-alist '("\\.markdown\\'" . markdown-mode))
 (add-to-list 'auto-mode-alist '("\\.md\\'" . markdown-mode))
+
+
+;; Android development Environment
+(add-to-list 'load-path "~/.emacs.d/site-lisp/android-mode")
+(require 'android-mode)
+(setq android-mode-sdk-dir "~/work/android/android")
+(add-hook 'gud-mode-hook
+			 (lambda ()
+            (add-to-list 'gud-jdb-classpath "/home/gregj/work/android-sdk-linux_86/platforms/android-7/android.jar")
+            ))
