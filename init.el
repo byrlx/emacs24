@@ -380,8 +380,7 @@ file of a buffer in an external program."
  ;; If there is more than one, they won't work right.
  '(sr-active-path-face ((t (:background "dim gray" :foreground "white" :weight bold :height 130))))
  '(sr-highlight-path-face ((t nil)))
- '(sr-passive-path-face ((t (:background "dim gray" :foreground "dark gray" :weight bold :height 130))))
- '(web-mode-html-tag-face ((t (:foreground "dark gray"))) t))
+ '(sr-passive-path-face ((t (:background "dim gray" :foreground "dark gray" :weight bold :height 130)))))
 
 
 ;;------------------------------------------------------------------------------
