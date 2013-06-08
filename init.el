@@ -112,12 +112,55 @@
 
 (load-file "~/.emacs.d/site-lisp/personal-funcs.el")
 
+;;------------------------------------------------------------------------------------------------------------------------------------------------------------
+;; Load CEDET.
+;; See cedet/common/cedet.info for configuration details.
+;; IMPORTANT: For Emacs >= 23.2, you must place this *before* any
+;; CEDET component (including EIEIO) gets activated by another
+;; package (Gnus, auth-source, ...).
+(load-file "~/.emacs.d/cedet-1.1/common/cedet.el")
+
+;; Enable EDE (Project Management) features
+(global-ede-mode 1)
+
+;; Enable EDE for a pre-existing C++ project
+;; (ede-cpp-root-project "NAME" :file "~/myproject/Makefile")
+
+
+;; Enabling Semantic (code-parsing, smart completion) features
+;; Select one of the following:
+
+;; * This enables the database and idle reparse engines
+(semantic-load-enable-minimum-features)
+
+;; * This enables some tools useful for coding, such as summary mode,
+;; imenu support, and the semantic navigator
+(semantic-load-enable-code-helpers)
+
+;; * This enables even more coding tools such as intellisense mode,
+;; decoration mode, and stickyfunc mode (plus regular code helpers)
+;; (semantic-load-enable-gaudy-code-helpers)
+
+;; * This enables the use of Exuberant ctags if you have it installed.
+;; If you use C++ templates or boost, you should NOT enable it.
+;; (semantic-load-enable-all-exuberent-ctags-support)
+;; Or, use one of these two types of support.
+;; Add support for new languages only via ctags.
+;; (semantic-load-enable-primary-exuberent-ctags-support)
+;; Add support for using ctags as a backup parser.
+;; (semantic-load-enable-secondary-exuberent-ctags-support)
+
+;; Enable SRecode (Template management) minor-mode.
+;; (global-srecode-minor-mode 1)
+
+
+
 ;;------------------------------------------------------------------------------
 ;;; ECB for loading speedbar
 (add-to-list 'load-path "~/.emacs.d/ecb")
 													 ;(load-file "~/.emacs.d/ecb/ecb.el")
 (require 'ecb)
-(require 'ecb-autoloads)
+;(require 'ecb-autoloads)
 (setq stack-trace-on-error t)
 (global-set-key (kbd "C-'") 'ecb-hide-ecb-windows)
 (global-set-key (kbd "C-;") 'ecb-show-ecb-windows)
@@ -183,8 +226,8 @@
 (add-to-list 'load-path "~/.emacs.d/git")
 (require 'git-emacs)
 (require 'dash)
-(global-set-key (kbd "C-x v ]") 'magit-status)
-(global-set-key (kbd "C-x v [") 'magit-log)
+(global-set-key (kbd "C-c m s") 'magit-status)
+(global-set-key (kbd "C-c m l") 'magit-log)
 
 ;;------------------------------------------------------------------------------
 ;;; Autopair in emacs
@@ -299,7 +342,7 @@ file of a buffer in an external program."
  '(bongo-enabled-backends (quote (mpg123 vlc mplayer ogg123 speexdec timidity mikmod)))
  '(custom-safe-themes (quote ("fc5fcb6f1f1c1bc01305694c59a1a861b008c534cae8d0e48e4d5e81ad718bc6" (default))))
  '(custom-theme-directory "~/.emacs.d/themes")
- '(custom-theme-load-path (quote ("/home/vuongnguyen/.emacs.d/themes/emacs-color-theme-solarized" custom-theme-directory t)))
+ '(custom-theme-load-path (quote ("~/.emacs.d/themes/emacs-color-theme-solarized" custom-theme-directory t)))
  '(ecb-compile-window-height 10)
  '(ecb-layout-name "leftright2")
  '(ecb-layout-window-sizes (quote (("leftright2" (ecb-directories-buffer-name 0.1 . 0.5625) (ecb-sources-buffer-name 0.1 . 0.4166666666666667) (ecb-methods-buffer-name 0.16666666666666666 . 0.5625) (ecb-history-buffer-name 0.16666666666666666 . 0.4166666666666667)))))
@@ -352,7 +395,7 @@ file of a buffer in an external program."
 (global-set-key (kbd "C-c k") 'yas/expand)
 
 (require 'auto-complete-config)
-(add-to-list 'ac-dictionary-directories "/home/vuongnguyen/.emacs.d/site-lisp/ac-dict")
+(add-to-list 'ac-dictionary-directories "~/.emacs.d/site-lisp/ac-dict")
 (ac-config-default)
 (ac-set-trigger-key "<tab>")
 (global-auto-complete-mode t)
@@ -365,7 +408,7 @@ file of a buffer in an external program."
 
 ;;--------------------------------------------------------------------
 ;;; Org-mode is a personal information management and outlining tool for Emacs
-(add-to-list 'load-path "/home/vuongnguyen/.emacs.d/org-mode")
+(add-to-list 'load-path "~/.emacs.d/org-mode")
 (require 'org-install)
 (add-to-list 'auto-mode-alist '("\\.org$" . org-mode))
 (define-key global-map "\C-cl" 'org-store-link)
@@ -395,9 +438,9 @@ file of a buffer in an external program."
 
 ;;-----------------------------------------------------------------------------
 ;;; nXHTML - Emacs Utilities for Web 
-(load "~/.emacs.d/site-lisp/nxhtml/autostart.el")
-(setq mumamo-background-colors nil)
-(ido-mode '1)
+;; (load "~/.emacs.d/site-lisp/nxhtml/autostart.el")
+;; (setq mumamo-background-colors nil)
+;; (ido-mode '1)
 ;;-----------------------------------------------------------------------------
 ;;; ido-ubiquitous.el --- Use ido (nearly) everywhere.
 (require 'ido-ubiquitous)
@@ -406,35 +449,42 @@ file of a buffer in an external program."
 													 ; when Smex is auto-initialized on its first run.
 (ido-ubiquitous-mode)
 
-;;-----------------------------------------------------------------------------
+;;-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+;;-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 ;;; web-mode.el --- Web-mode environment for web development on emacs
-;; (require 'web-mode) 
-;; (setq auto-mode-alist (cons '("\\.php$" . web-mode) auto-mode-alist))
-;; (setq auto-mode-alist (cons '("\\.aspx$" . web-mode) auto-mode-alist))
-;; (setq auto-mode-alist (cons '("\\.html$" . web-mode) auto-mode-alist))
-;; (add-to-list 'auto-mode-alist '("\\.phtml\\'" . web-mode)) 
-;; (add-to-list 'auto-mode-alist '("\\.tpl\\.php\\'" . web-mode)) 
-;; (add-to-list 'auto-mode-alist '("\\.jsp\\'" . web-mode)) 
-;; (add-to-list 'auto-mode-alist '("\\.as[cp]x\\'" . web-mode)) 
-;; (add-to-list 'auto-mode-alist '("\\.erb\\'" . web-mode))
-;; (add-to-list 'auto-mode-alist '("\\.html?\\'" . web-mode))
+(require 'web-mode) 
+(setq auto-mode-alist (cons '("\\.php$" . web-mode) auto-mode-alist))
+(setq auto-mode-alist (cons '("\\.aspx$" . web-mode) auto-mode-alist))
+(setq auto-mode-alist (cons '("\\.html$" . web-mode) auto-mode-alist))
+(add-to-list 'auto-mode-alist '("\\.phtml\\'" . web-mode)) 
+(add-to-list 'auto-mode-alist '("\\.tpl\\.php\\'" . web-mode)) 
+(add-to-list 'auto-mode-alist '("\\.jsp\\'" . web-mode)) 
+(add-to-list 'auto-mode-alist '("\\.as[cp]x\\'" . web-mode)) 
+(add-to-list 'auto-mode-alist '("\\.erb\\'" . web-mode))
+(add-to-list 'auto-mode-alist '("\\.html?\\'" . web-mode))
 
-;; (defun web-mode-hook () "Hooks for Web mode." 
-;;   (setq web-mode-markup-indent-offset 4)
-;;   (setq web-mode-css-indent-offset 4)
-;;   (setq web-mode-code-indent-offset 4)) 
-;; (add-hook 'web-mode-hook 'web-mode-hook)
+; Identication
+(defun web-mode-hook () "Hooks for Web mode." 
+  (setq web-mode-markup-indent-offset 4)
+  (setq web-mode-css-indent-offset 4)
+  (setq web-mode-code-indent-offset 4)) 
+(add-hook 'web-mode-hook 'web-mode-hook)
+; Add a snippets 
+(add-to-list 'web-mode-snippets '("div" "<div>" "</div>"))
+(add-to-list 'web-mode-snippets '("span" "<span>" "</span>"))
+(add-to-list 'web-mode-snippets '("html" "<html>" "</html>"))
+(add-to-list 'web-mode-snippets '("p" "<p>" "</p>"))
+(setq web-mode-enable-block-faces t)
+; Set face color for attributes
+(set-face-attribute 'web-mode-doctype-face nil :foreground "#CB4B16" :bold t)
+(set-face-attribute 'web-mode-html-tag-face nil :foreground "#859900" :bold t)
+(set-face-attribute 'web-mode-html-attr-name-face nil :foreground "DodgerBlue3")
 
-;; (add-to-list 'web-mode-snippets '("div" "<div>" "</div>"))
-;; (add-to-list 'web-mode-snippets '("span" "<span>" "</span>"))
-;; (add-to-list 'web-mode-snippets '("html" "<html>" "</html>"))
-;; (add-to-list 'web-mode-snippets '("p" "<p>" "</p>"))
-
-;; (require 'flymake)
-;; (autoload 'flymake-find-file-hook "flymake" "" t)
-;; (add-hook 'find-file-hook 'flymake-find-file-hook)
-;; (setq flymake-gui-warnings-enabled nil)
-;; (setq flymake-log-level 1)
+(require 'flymake)
+(autoload 'flymake-find-file-hook "flymake" "" t)
+(add-hook 'find-file-hook 'flymake-find-file-hook)
+(setq flymake-gui-warnings-enabled nil)
+(setq flymake-log-level 1)
 
 ;; ;; Customize how flymake displays the errors
 ;; '(flymake-errline ((((class color)) (:underline "OrangeRed"))))
@@ -445,13 +495,3 @@ file of a buffer in an external program."
    "Major mode for editing Markdown files" t)
 (add-to-list 'auto-mode-alist '("\\.markdown\\'" . markdown-mode))
 (add-to-list 'auto-mode-alist '("\\.md\\'" . markdown-mode))
-
-
-;; Android development Environment
-(add-to-list 'load-path "~/.emacs.d/site-lisp/android-mode")
-(require 'android-mode)
-(setq android-mode-sdk-dir "~/work/android/android")
-(add-hook 'gud-mode-hook
-			 (lambda ()
-            (add-to-list 'gud-jdb-classpath "/home/gregj/work/android-sdk-linux_86/platforms/android-7/android.jar")
-            ))

@@ -1,6 +1,10 @@
+;;; ecb-autoloads.el --- automatically extracted autoloads
+;;
+;;; Code:
+
 
 ;;;### (autoloads (ecb-byte-compile ecb-minor-mode ecb-activate)
-;;;;;;  "ecb" "ecb.el" (19331 65535))
+;;;;;;  "ecb" "ecb.el" (20891 47901))
 ;;; Generated autoloads from ecb.el
 
 (autoload 'ecb-activate "ecb" "\
@@ -30,8 +34,8 @@ exist.
 
 ;;;***
 
-;;;### (autoloads (ecb-show-help) "ecb-help" "ecb-help.el" (19331
-;;;;;;  65535))
+;;;### (autoloads (ecb-show-help) "ecb-help" "ecb-help.el" (20891
+;;;;;;  47901))
 ;;; Generated autoloads from ecb-help.el
 
 (autoload 'ecb-show-help "ecb-help" "\
@@ -50,7 +54,7 @@ HTML-online-documentation is not included.
 
 ;;;***
 
-;;;### (autoloads nil "ecb-util" "ecb-util.el" (19331 65535))
+;;;### (autoloads nil "ecb-util" "ecb-util.el" (20891 47901))
 ;;; Generated autoloads from ecb-util.el
 
 (defconst ecb-running-xemacs (featurep 'xemacs))
@@ -58,15 +62,23 @@ HTML-online-documentation is not included.
 ;;;***
 
 ;;;### (autoloads nil nil ("ecb-advice-test.el" "ecb-analyse.el"
-;;;;;;  "ecb-autogen.el" "ecb-cedet-wrapper.el" "ecb-common-browser.el"
-;;;;;;  "ecb-compatibility.el" "ecb-compilation.el" "ecb-create-layout.el"
-;;;;;;  "ecb-cycle.el" "ecb-eshell.el" "ecb-examples.el" "ecb-face.el"
-;;;;;;  "ecb-file-browser.el" "ecb-jde.el" "ecb-layout-defs.el" "ecb-layout.el"
-;;;;;;  "ecb-method-browser.el" "ecb-mode-line.el" "ecb-navigate.el"
+;;;;;;  "ecb-autogen.el" "ecb-buffertab.el" "ecb-cedet-wrapper.el"
+;;;;;;  "ecb-common-browser.el" "ecb-compatibility.el" "ecb-compilation.el"
+;;;;;;  "ecb-create-layout.el" "ecb-cycle.el" "ecb-eshell.el" "ecb-examples.el"
+;;;;;;  "ecb-face.el" "ecb-file-browser.el" "ecb-jde.el" "ecb-layout-defs.el"
+;;;;;;  "ecb-layout.el" "ecb-method-browser.el" "ecb-mode-line.el"
+;;;;;;  "ecb-multiframe.el" "ecb-navigate.el" "ecb-semantic-wrapper.el"
 ;;;;;;  "ecb-semantic.el" "ecb-speedbar.el" "ecb-symboldef.el" "ecb-tod.el"
 ;;;;;;  "ecb-upgrade.el" "ecb-winman-support.el" "silentcomp.el"
-;;;;;;  "tree-buffer.el") (20792 53065 948927))
+;;;;;;  "tree-buffer.el") (20894 59104 201180))
 
 ;;;***
 
 (provide 'ecb-autoloads)
+;; Local Variables:
+;; version-control: never
+;; no-byte-compile: t
+;; no-update-autoloads: t
+;; coding: utf-8
+;; End:
+;;; ecb-autoloads.el ends here
