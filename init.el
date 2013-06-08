@@ -17,7 +17,6 @@
 ;; Setup for keybinding
 (load-file "~/.emacs.d/site-lisp/conf-kbd.el")
 (load-file "~/.emacs.d/site-lisp/conf-emacs-stuff.el")
-(load-file "~/.emacs.d/site-lisp/conf-emacs.el")
 
 ;;------------------------------------------------------------------------------
 ;;; Configuration:
@@ -65,8 +64,6 @@
 ;; (global-set-key (kbd "C-c l f") 'lusty-file-explorer)
 ;; (global-set-key (kbd "C-c l b") 'lusty-buffer-explorer)
 
-
-
 ;;------------------------------------------------------------------------------
 ;;; Provide a powerful file explorer
 (load-file "~/.emacs.d/site-lisp/conf-sunrise.el")
@@ -91,3 +88,5 @@
 ;;-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 ;;; web-mode.el --- Web-mode environment for web development on emacs
 (load-file "~/.emacs.d/site-lisp/conf-web-mode.el")
+
+(load-file "~/.emacs.d/site-lisp/conf-emacs.el")
