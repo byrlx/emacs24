@@ -96,3 +96,7 @@
 
 (add-to-list 'load-path "~/.emacs.d/site-lisp/emmet-mode")
 (require 'emmet-mode)
+
+
+(add-to-list 'load-path "~/.emacs.d/site-lisp/elscreen")
+(elscreen-start)
