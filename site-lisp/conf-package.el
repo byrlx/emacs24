@@ -1,8 +1,12 @@
+;(require 'package)
+;(package-initialize)
+;(add-to-list 'package-archives 
+;				 '("melpa" . "http://melpa.milkbox.net/packages/")
+;				 'APPEND)
+
 (require 'package)
 (package-initialize)
-(add-to-list 'package-archives 
-				 '("melpa" . "http://melpa.milkbox.net/packages/")
-				 'APPEND)
+(add-to-list 'package-archives '("melpa" . "http://melpa.milkbox.net/packages/") t)
 
 (setq package-archives '(("ELPA" . "http://tromey.com/elpa/") 
 								 ("gnu" . "http://elpa.gnu.org/packages/")

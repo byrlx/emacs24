@@ -90,3 +90,9 @@
 (load-file "~/.emacs.d/site-lisp/conf-web-mode.el")
 
 (load-file "~/.emacs.d/site-lisp/conf-emacs.el")
+(autoload 'js2-mode "js2" nil t)
+(add-to-list 'auto-mode-alist '("\\.js$" . js2-mode))
+
+
+(add-to-list 'load-path "~/.emacs.d/site-lisp/emmet-mode")
+(require 'emmet-mode)
