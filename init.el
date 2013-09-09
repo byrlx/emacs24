@@ -28,6 +28,7 @@
 ;;; - anything.el
 ;;; - Autopair
 ;;; - recentf package
+;;; - flymake package
 (load-file "~/.emacs.d/site-lisp/conf-utilities.el")
 
 ;;------------------------------------------------------------------------------
@@ -80,23 +81,13 @@
 (autoload 'bongo "bongo"
   "Start Bongo by switching to a Bongo buffer." t)
 
-;;-----------------------------------------------------------------------------
-;;; nXHTML - Emacs Utilities for Web 
-;; (load "~/.emacs.d/site-lisp/nxhtml/autostart.el")
-;; (setq mumamo-background-colors nil)
-
 ;;-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 ;;; web-mode.el --- Web-mode environment for web development on emacs
 (load-file "~/.emacs.d/site-lisp/conf-web-mode.el")
 
 (load-file "~/.emacs.d/site-lisp/conf-emacs.el")
+
 (autoload 'js2-mode "js2" nil t)
 (add-to-list 'auto-mode-alist '("\\.js$" . js2-mode))
-
-
 (add-to-list 'load-path "~/.emacs.d/site-lisp/emmet-mode")
 (require 'emmet-mode)
-
-
-(add-to-list 'load-path "~/.emacs.d/site-lisp/elscreen")
-(elscreen-start)

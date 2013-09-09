@@ -34,14 +34,14 @@
 (define-key global-map "\C-ca" 'org-agenda)
 (setq org-log-done t)
 (setq org-agenda-files (list "~/org/work.org"
-                             "~/org/school.org" 
-                             "~/org/home.org"))
+									  "~/org/school.org" 
+									  "~/org/home.org"))
 
 ;;-----------------------------------------------------------------------------
 ;;; phpunil.el -- Interact with PHPUnit
 (require 'phpunit)
 
-;;-----------------------------------------------------------------------------
+;;----------------------------------------------------------------------------
 ;;; ido-ubiquitous.el --- Use ido (nearly) everywhere.
 (ido-mode '1)
 (require 'ido-ubiquitous)
@@ -69,15 +69,15 @@
 ;; more useful.
 (global-set-key (kbd "C-x C-r") 'ido-recentf-open)
 ;; enable recent files mode.
-(recentf-mode t)
-													 ; 5 files ought to be enough.
+;; (recentf-mode 1)
+;; 													 ; 5 files ought to be enough.
 (setq recentf-max-saved-items 4)
 (defun ido-recentf-open ()
   "Use `ido-completing-read' to \\[find-file] a recent file"
   (interactive)
   (if (find-file (ido-completing-read "Recent files: " recentf-list))
-      (message "Opening file...")
-    (message "Aborting")))
+		(message "Opening file...")
+	 (message "Aborting")))
 
 ;;------------------------------------------------------------------------------
 ;;; Open current file editing with external programs
@@ -94,3 +94,15 @@ file of a buffer in an external program."
                     buffer-file-name)))
   )
 (global-set-key (kbd "C-c o") 'prelude-open-with)
+
+;;-------------------------------------------------------------------------------
+;;; Update new flymake
+(require 'flymake)
+;; Let's run 8 checks at once instead.
+(setq flymake-max-parallel-syntax-checks 8)
+;; Nope, I want my copies in the system temp dir.
+(setq flymake-run-in-place nil)
+;; This lets me say where my temp dir is.
+(setq temporary-file-directory "~/.emacs.d/tmp/")
+;; I want to see all errors for the line.
+(setq flymake-number-of-errors-to-display nil)

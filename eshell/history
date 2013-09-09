@@ -1,9 +1,3 @@
-ls
-cd week1/
-ls
-exit
-cd /home/vuongnguyen/
-cd Workspace/idea-IC-123.169/
 /bin
 exit
 cd /home/vuongnguyen/
@@ -125,4 +119,10 @@ ls
 vim README.en
 cd /home/vuongnguyen/Downloads/
 unzip documents-export-2013-04-04.zip 
+exit
+cd /home/vuongnguyen/.emacs.d/site-lisp/sunrise-commander/
+exit
+cd /home/vuongnguyen/Mail/drafts/
+exit
+cd /home/vuongnguyen/
 exit
