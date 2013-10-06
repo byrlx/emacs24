@@ -69,7 +69,7 @@
 ;; more useful.
 (global-set-key (kbd "C-x C-r") 'ido-recentf-open)
 ;; enable recent files mode.
-;; (recentf-mode 1)
+(recentf-mode 1)
 ;; 													 ; 5 files ought to be enough.
 (setq recentf-max-saved-items 4)
 (defun ido-recentf-open ()
